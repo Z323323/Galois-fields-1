@@ -13,11 +13,11 @@ $->$<br>
 $s = j + tn$<br>
 $---$<br>
 $->$<br>
-$r + s = i + j + (q + t)n$
+$r + s = i + j + (q + t)n$<br>
 $->$<br>
-$r + s \equiv i + j \mod n$
+$r + s \equiv i + j \mod n$<br>
 $---$<br>
-$rs = ij + (qj + ti)n + qtn^{2}$
+$rs = ij + (qj + ti)n + qtn^{2}$<br>
 $->$<br>
 $rs \equiv ij \mod n$
 
