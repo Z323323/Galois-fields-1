@@ -16,14 +16,14 @@ $->$<br>
 $r + s = i + j + (q + t)n$<br>
 $->$<br>
 $r + s \equiv i + j \mod n$<br>
-$or$<br>
-$r \oplus s = i + j$<br>
+$->$<br>
+$r \oplus s$<br>
 $---$<br>
 $rs = ij + (qj + ti)n + qtn^{2}$<br>
 $->$<br>
 $rs \equiv ij \mod n$<br>
-$or$<br>
-$r \otimes s = i + j$<br>
+$->$<br>
+$r \otimes s$
 
 ### 7.3 Additive groups
 
@@ -47,7 +47,7 @@ Of couse it's always possible to find a generator $g$ for additive groups.
 
 $1g = g, 2g = g \oplus g, \dots, ig = g \oplus_{iTimes} g, \dots$
 
-Since $g$ is a generator we must have $i \otimes g = 0$ for some $i$. Let $n$ be the smallest integer $n$ such that $n \otimes g = 0$ and $i \otimes g \neq 0$ for $1 \leq i \leq n - 1$. Adding the sum of $j$ $g$'s for any $j > 0$ to each side of $i \otimes g \neq 0$ results in $(i + j) \otimes g \neq j \otimes g$. Thus the elements $\{ 1g, 2g, \dots, ng = 0 \}$ must all be different.
+Since $g$ is a generator we must have $i \otimes g = 0$ for some $i$. Let $n$ be the smallest integer $n$ such that $n \otimes g = 0$ and $i \otimes g \neq 0$ for $1 \leq i \leq n - 1$. Adding the sum of $j$ $g$'s for any $j > 0$ to each side of $i \otimes g \neq 0$ results in $(i + j) \otimes g \neq j \otimes g$. Thus the elements $\\{ 1g, 2g, \dots, ng = 0 \\}$ must all be different.
 
  
 
