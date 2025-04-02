@@ -21,7 +21,7 @@ $r \oplus s = i + j$<br>
 $---$<br>
 $rs = ij + (qj + ti)n + qtn^{2}$<br>
 $->$<br>
-$rs \equiv ij \mod n$
+$rs \equiv ij \mod n$<br>
 $or$<br>
 $r \otimes s = i + j$<br>
 
