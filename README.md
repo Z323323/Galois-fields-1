@@ -23,7 +23,7 @@ $rs \equiv ij \mod n$
 
 ### 7.3 Additive groups
 
-The group operation $'+'$ ($\mod$ something) can be specified by an $n \times n$ table whose entries are of the form $a_i + a_j$ (row $i$, column $j$). If $a_j \neq a_k$ then $a_i + a_j \neq a_i + a_k$ and this means that any elements in any row of the addition table are distinct, that is, each row contains each element of the group $G$ exactly once, and the same goes for the columns.
+The group operation $'+'$ [$\mod something$] can be specified by an $n \times n$ table whose entries are of the form $a_i + a_j$ (row $i$, column $j$). If $a_j \neq a_k$ then $a_i + a_j \neq a_i + a_k$ and this means that any elements in any row of the addition table are distinct, that is, each row contains each element of the group $G$ exactly once, and the same goes for the columns.
 
 ### 7.3.1 Alternative group axioms
 
