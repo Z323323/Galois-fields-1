@@ -29,6 +29,8 @@ The group operation $'+'$ can be specified by an $n \times n$ table whose entrie
 
 The previously mentioned property of addition can be seen as a permutation of $G$, that is, each row of the table actually represents the set of the elements of $G$ in a different order. This property can be taken as one of the group axioms.
 
-**Theorem 7.1** _Let $G = \{ a, b, c, \dots \}$ be a set of elements on which the addition operation is defined ($\mod$ something). Then $G$ is a group under the operation $+$ if and only if:_
+**Theorem 7.1** _Let_ $G = \{ a, b, c, \dots \}$ _be a set of elements on which the addition operation is defined. Then_ $G$ _is a group under the operation_ $+$ _if and only if:_
 
-- 
+- _The operation is associative._
+- _There is an indentity element._
+- _For each_ $a \in G$_,_ $a + G$ _is a permutation of $G$._
