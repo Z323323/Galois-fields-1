@@ -1,6 +1,8 @@
 # Galois fields theory
 
-This resources aims to simply extract every non-trivial result from [https://web.stanford.edu/~marykw/classes/CS250_W19/readings/Forney_Introduction_to_Finite_Fields.pdf].
+This resource extracts every non-trivial result (basically everything) from [https://web.stanford.edu/~marykw/classes/CS250_W19/readings/Forney_Introduction_to_Finite_Fields.pdf] + provides some insights regarding non intuitive concepts (where possible).
+
+![MEP3](MEP3.jpg)
 
 ### 7.2.2 Mod-n arithmetic
 
@@ -77,7 +79,15 @@ This resource is probably not the best to really grasp subgroups (I think it's a
 
 **Proof**. If $g - h \in S$ then the elements of $S \oplus h$ include $(g - h) \oplus h = g$ and therefore all elements of $S \oplus g$ (remember that this means that we can represent the whole set as $\\{ (g - h) \oplus h = g \otimes 1, g \otimes 2, \dots, g \otimes n \\}$) so $S \oplus g \subseteq S \oplus h$. Also, since $g - h \in S$ then $n - g + h \in S$ and $\\{ (n - g + h) \oplus g = h \otimes 1, h \otimes 2, \dots, h \otimes n \\} = S$, thus $S \oplus h \subseteq S \oplus g$ and therefore $S \oplus g = S \oplus h$. 
 
-Otherwise if $g - h \not\in S$, then $g - h \oplus h = g$ should produce the previous structure (the same goes for $n - g + h$) but this is impossible because $g - h \not\in S$, and therefore the resulting set can't be $S$. The disjoint property is actually stunning. If $S \oplus g$ and $S \oplus h$ have any element in common, say $s \oplus g = s' \oplus h$, then $g - h = s' - s$, but $g - h \not\in S$ implies that $S \oplus g$ and $S \oplus h$ are disjoint (this one is quite difficult to grasp).
+Otherwise if $g - h \neq 0 \not\in S$, then $g - h \oplus h = g$ implies either $g \not\in S$ or $n - g + h \oplus g$ implies $h \not\in S$; this means that $g$ doesn't share cofactors with $h$ and this means that the two subgroups are disjoint. This is clearer if you look at [https://github.com/Z323323/Group-theory-1/blob/main/README.md#additive-cyclic-groups].
+
+It follows that the distinct cosets $S \oplus g$ and $S \oplus h$ of a subgroup $S \subseteq G$ form a disjoint partition of $G$, since every element $g \in G$ lies in some coset, namely $S \oplus g$.
+
+The elements $s \oplus g$ of a coset $S \oplus g$ are all distinct, since $s \oplus g = s' \oplus g$ implies $s = s'$. Therefore if $S$ is finite then all cosets of $S$ have the same size, namely the size $|S|$ of $S = S \oplus 0$ (this I guess implies $n$ to be prime). If $G$ is finite then is the disjoint union of a finite number $|C|$ of cosets of $S \subseteq G$, each of size $|S|$, so $|G| = |C||S|$.
+
+**Theorem 7.4 (Lagrange)** If $S$ is a subgroup of a finite group $G$, then $|S|$ divides $|G|$.
+
+
 
 
 
