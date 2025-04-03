@@ -1,4 +1,4 @@
-# Galois fields theory
+# Galois fields
 
 This resource extracts every non-trivial result (basically everything) from [https://web.stanford.edu/~marykw/classes/CS250_W19/readings/Forney_Introduction_to_Finite_Fields.pdf] + provides some insights regarding non intuitive concepts (where possible).
 
