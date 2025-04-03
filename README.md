@@ -73,11 +73,12 @@ A subgroup $S$ of a group $G$ is an algebraic structure such that $S$ is itself 
 
 This resource is probably not the best to really grasp subgroups (I think it's a little bit advanced), I strongly recommend to play around with [https://github.com/Z323323/Group-theory-elements/blob/main/Zn.py].
 
-**Lemma 7.3** Two cosets $S \oplus g$ and $S \oplus h$ are the same if $g - h \in S$ or disjoint if $g - h \not\in S$.
+**Lemma 7.3** Two cosets $S \oplus g$ and $S \oplus h$ are the same if $g - h \in S$ or disjoint if $g - h \not\in S$ (here I guess $g$ and $h$ represent two different generators for the subgroup $S$).
 
-**Proof**. If $g - h \in S$ then the elements of $S \oplus h$ include $(g - h) \oplus h = g$ and therefore all elements of $S \oplus g$ (remember that this means that we can represent the whole set as $\\{ (g - h) \oplus h = g \otimes 1, g \otimes 2, \dots, g \otimes n \\}$) so $S \oplus g \subseteq S \oplus h$ and $S \oplus h \subseteq S \oplus g$ and therefore $S \oplus g = S \oplus h$.
-On the other hand, if $S \oplus g$ and $S \oplus h$ have any element in common, say $s \oplus g = s' \oplus h$, then $g - h = s' - s \in S$, thus $g - h \not\in S$ implies that $S \oplus g$ and $S \oplus h$ are disjoint. 
- 
+**Proof**. If $g - h \in S$ then the elements of $S \oplus h$ include $(g - h) \oplus h = g$ and therefore all elements of $S \oplus g$ (remember that this means that we can represent the whole set as $\\{ (g - h) \oplus h = g \otimes 1, g \otimes 2, \dots, g \otimes n \\}$) so $S \oplus g \subseteq S \oplus h$. Also, since $g - h \in S$ then $n - g + h \in S$ and $\\{ (n - g + h) \oplus g = h \otimes 1, h \otimes 2, \dots, h \otimes n \\} = S$, thus $S \oplus h \subseteq S \oplus g$ and therefore $S \oplus g = S \oplus h$. 
+
+Otherwise if $g - h \not\in S$, then $g - h \oplus h = g$, but $g
+
 
 
 
