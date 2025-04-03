@@ -77,7 +77,9 @@ This resource is probably not the best to really grasp subgroups (I think it's a
 
 **Proof**. If $g - h \in S$ then the elements of $S \oplus h$ include $(g - h) \oplus h = g$ and therefore all elements of $S \oplus g$ (remember that this means that we can represent the whole set as $\\{ (g - h) \oplus h = g \otimes 1, g \otimes 2, \dots, g \otimes n \\}$) so $S \oplus g \subseteq S \oplus h$. Also, since $g - h \in S$ then $n - g + h \in S$ and $\\{ (n - g + h) \oplus g = h \otimes 1, h \otimes 2, \dots, h \otimes n \\} = S$, thus $S \oplus h \subseteq S \oplus g$ and therefore $S \oplus g = S \oplus h$. 
 
-Otherwise if $g - h \not\in S$, then $g - h \oplus h = g$ should produce the previous structure (the same goes for $n - g + h$) but this is impossible because $g - h \not\in S$, and therefore the resulting set can't be $S$. The fact they are disjoint I think that it's actually wrong, but I could be wrong.
+Otherwise if $g - h \not\in S$, then $g - h \oplus h = g$ should produce the previous structure (the same goes for $n - g + h$) but this is impossible because $g - h \not\in S$, and therefore the resulting set can't be $S$. The disjoint property is actually stunning. If $S \oplus g$ and $S \oplus h$ have any element in common, say $s \oplus g = s' \oplus h$, then $g - h = s' - s$, but $g - h \not\in S$ implies that $S \oplus g$ and $S \oplus h$ are disjoint (this one is quite difficult to grasp).
+
+
 
 
 
