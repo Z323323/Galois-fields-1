@@ -153,17 +153,19 @@ Let's get the arcane magic behind convolution.
 
 ### Convolution
 
-$h(x) = \sum_{i = 0}^{m} a_{i}x_{i}$<br>
-$g(x) = \sum_{j = 0}^{n} b_{j}x^{j}$<br>
+$h(x) = \sum_{i = 0}^{n} a_{i}x_{i}$<br>
+$g(x) = \sum_{j = 0}^{m} b_{j}x^{j}$<br>
 $->$<br>
-$h(x)g(x) = \sum_{i = 0}^{m}\sum_{j = 0}^{n} a_{i}b_{j}x^{i}x^{j}$<br>
+$h(x)g(x) = \sum_{i = 0}^{n}\sum_{j = 0}^{m} a_{i}b_{j}x^{i}x^{j}$<br>
 $->$<br>
-- $k = i + j$
-- $k$ in $range(0..m + n)$
-- - $\sum_{i = 0}^{m}\sum_{j = 0}^{n} a_{k - j}b_{j}x^{k}$
-  - $->$
-  - $h(x)g(x) = \sum_{k = 0}^{m + n}(\sum_{j = 0}^{k} a_{k - j}b_{j}) x^{k}$
-
+$k = i + j$<br>
+$->$<br>
+$\sum_{i = 0}^{n}\sum_{j = 0}^{m} a_{i}b_{j}x^{k}$<br>
+$-artifice>$<br>
+$z = n + m$<br>
+$->$<br>
+$h(x)g(x) = \sum_{i = 0}^{z} \sum_{j = 0}^{i} a_{j}b_{i - j} x^{i}$
+$-renaming-vars>$<br>
 $f_{i} = \sum_{j = 0}^{i} h_{j}g_{i - j}$<br>
 $->$<br>
 $f_{0} = h_{0}g_{0}$<br>
