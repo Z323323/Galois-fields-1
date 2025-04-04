@@ -149,9 +149,14 @@ The rules for adding, subtracting or multiplying polynomials are the same over a
 
 $f_{i} = \sum_{j = 0}^{i} h_{j}g_{i - j}$<br>
 $->$<br>
-$f_{0} = h_{0}g_{i} + h_{1}g_{i - 1} + \dots + h_{i}j_{0}$<br>
-$f_{1} = h_{1}g_{
+$f_{0} = h_{0}g_{0}$<br>
+$f_{1} = h_{0}g_{1} + h_{1}g_{0}$<br>
+$f_{2} = h_{0}g_{2} + h_{1}g_{1} + h_{2}g^{0}$<br>
+$f_{3} = h_{0}g_{3} + h_{1}g_{2} + h_{2}g_{1} + h_{3}g_{0}$<br>
+$f_{4} = h_{0}g_{4} + h_{1}g_{3} + h_{2}g_{2} + h_{1}g_{3} + h_{0}g_{4}$<br>
+$dots$
 
+So simple and clever lol. 
 
 
 
