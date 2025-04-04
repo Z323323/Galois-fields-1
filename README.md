@@ -147,16 +147,43 @@ where $f_{i} \in F, 0 \leq i \leq m$ and $f_{m} \neq 0$. We have $deg(f(x)) = m$
 
 The rules for adding, subtracting or multiplying polynomials are the same over a general field $F$ over $R$, except that coefficient operations are in $F$. In particular, addition and subtraction are performed componentwise (we can't add two different-degree indeterminates). For multiplication, the coefficients of a polynomial product $f(x) = h(x)g(x)$ are determined by _convolution_ (I guess $i \geq j$ is implied, even though in general I guess we'll have $i = j$ but I could be wrong):
 
+$f_{i} = \sum_{j = 0}^{i} h_{j}g_{i - j}$
+
+Let's get the arcane magic behind convolution.
+
+### Convolution
+
+$h(x) = \sum_{i = 0}^{m} a_{i}x_{i}$<br>
+$g(x) = \sum_{j = 0}^{n} b_{j}x^{j}$<br>
+$->$<br>
+$h(x)g(x) = \sum_{i = 0}^{m}\sum_{j = 0}^{n} a_{i}b_{j}x^{i}x^{j}$<br>
+$->$<br>
+- $k = i + j$
+- $k$ in $range(0..m + n)$
+- - $\sum_{i = 0}^{m}\sum_{j = 0}^{n} a_{k - j}b_{j}x^{k}$
+  - $->$
+  - $h(x)g(x) = \sum_{k = 0}^{m + n}(\sum_{j = 0}^{k} a_{k - j}b_{j}) x^{k}$
+
 $f_{i} = \sum_{j = 0}^{i} h_{j}g_{i - j}$<br>
 $->$<br>
 $f_{0} = h_{0}g_{0}$<br>
 $f_{1} = h_{0}g_{1} + h_{1}g_{0}$<br>
-$f_{2} = h_{0}g_{2} + h_{1}g_{1} + h_{2}g^{0}$<br>
+$f_{2} = h_{0}g_{2} + h_{1}g_{1} + h_{2}g_{0}$<br>
 $f_{3} = h_{0}g_{3} + h_{1}g_{2} + h_{2}g_{1} + h_{3}g_{0}$<br>
-$f_{4} = h_{0}g_{4} + h_{1}g_{3} + h_{2}g_{2} + h_{1}g_{3} + h_{0}g_{4}$<br>
-$dots$
+$f_{4} = h_{0}g_{4} + h_{1}g_{3} + h_{2}g_{2} + h_{3}g_{1} + h_{4}g_{0}$<br>
+$f_{5} = h_{0}g_{5} + h_{1}g_{4} + h_{2}g_{3} + h_{3}g_{2} + h_{4}g_{1} + h_{5}g_{0}$<br>
+$\dots$<br>
+$f_{k} = h_{0}g_{k} + h_{1}g_{k - 1} + h_{2}g_{k - 2} + \dots + h_{k - 2}g_{2} + h_{k - 1}g_{1} + h_{k}g_{0}$<br>
 
-So simple and clever lol. 
+$\dots$<br>
+$f_{k - 5} = h_{0}g_{k - 5} + h_{1}g_{k - 4} + h_{2}g_{k - 3} + h_{3}g_{k - 2} + h_{4}g_{k - 1} + h_{5}g_{k}$<br>
+$f_{k - 4} = h_{0}g_{k - 4} + h_{1}g_{k - 3} + h_{2}g_{k - 2} + h_{3}g_{k - 1} + h_{4}g_{k}$<br>
+$f_{k - 3} = h_{0}g_{k - 3} + h_{1}g_{k - 2} + h_{2}g_{k - 1} + h_{3}g_{k}$<br>
+$f_{k - 2} = h_{0}g_{k - 2} + h_{1}g_{k - 1} + h_{2}g_{k}$<br>
+$f_{k - 1} = h_{0}g_{k - 1} + h_{1}g_{k}$<br>
+$f_{k} = h_{0}g_{k}$
+
+
 
 
 
