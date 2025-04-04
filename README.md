@@ -132,11 +132,22 @@ This section is mainly a bunch of formalisms to show that is possible to define 
 
 Before going over, let me spend a couple words about the primality constraint of $n$.
 1. If we need to define a field, we will necessarily need $1$ in the set (identity of multiplication).
-2. If we have a $1$ in the set, $1$ will be a generator for $Z_{n}^{+}$, or in other words, the presence of $1$ in the field set force the field set to contain every number in a set of the form $\\{ 0, 1, 2, 3, \dots, n - 1 \\}$, because there are no constraints in the usage of the binary operations.
+2. If we have a $1$ in the set, $1$ will be a generator for $Z_{n}^{+}$, or, in other words, the presence of $1$ in the field set force the field set to be $\\{ 0, 1, 2, 3, \dots, n - 1 \\}$, because there are no constraints in the usage of the binary operations (here we only need consider $\oplus$).
 3. [2.] implies that if $n$ is not prime then $a, b \in Z_{n} | n = ab$ implies $ab \equiv 0 \mod n$, so the set of nonzero elements of $Z_{n}$ is not closed under multiplication mod $n$.
-4. Therefore the only way to have a field is to have a prime $n$. The reasoning changes with polynomials.
+
+Therefore the only way to have a field is to have a prime $n$. The reasoning changes with polynomials.
 
 ### 7.5 Polynomials
+
+Let's now consider polynomials over $F_{p}$, namely polynomials whose coefficients lie in $F_{p}$ and for which polynomial addition and multiplication is performed in $F_{p}$. A nonzero polynomial $f(x)$ of degree $m$ over a field $F$ is an expression of the form
+
+$f(x) = f_{0} + f_{1}x + f_{2}x^{2} + \dots + f_{m}x^{m}$
+
+where $f_{i} \in F, 0 \leq i \leq m$ and $f_{m} \neq 0$. We have $deg(f(x)) = m$. The symbol $x$ represents an indeterminate, not an element of $F$, i.e., two polynomials are different if and only if their coefficients are different. [ Over the real field $R$, a polynomial $f(x)$ is sometimes regarded as a function $f: R \rightarrow R$ and two polynomials over $R$ are different iff the corresponding polynomial functions are different. However, over finite fields it's not, i.e. over $F_{2}$ the polynomial functions $x$ and $x^{2}$ both map $0 \rightarrow 0, 1 \rightarrow 1$, yet $x$ and $x^{2}$ are different. ] The nonzero polynomials of degree $0$ are simply the nonzero field elements $f_{0} \in F$. There's also a special _zero polynomial_ $f(x) = 0$ whose degree is defined by convention as $deg(0) = - \infty$. The set of all polynomials over $F$ in an indeterminate $x$ is denoted by $F[x]$.
+
+The rules for adding, subtracting or multiplying polynomials are the same over a general field $F$ over $R$, except that coefficient operations are in $F$. In particular, addition and subtraction are performed componentwise (we can't add two different-degree indeterminates). For multiplication, the coefficients of a polynomial product $f(x) = h(x)g(x)$ are determined by _convolution_:
+
+$f_{i} = \sum_{j = 0}^{i} h_{j}g_{i - j}$ (distribution)
 
 
 
