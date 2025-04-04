@@ -199,9 +199,21 @@ If two nonzero polynomials are multiplied, then their degrees add; i.e., $deg(h(
 
 The set $F[x]$ has many of the properties of a field. It's an abelian group under addition, whose identity is the zero polynomial $0 \in F[x]$. It is closed under multiplication, which is both associative and commutative and which distributes over addition. It has a multiplicative identity $1 \in F[x]$ and the cancellation law holds.
 
-All of these properties should be evident from the previous structure; for all values ranging from $f_{n + 1}$ to $f_{z}$ what will actually happen is that all of those will be folded into the first "half" because the relative $x$ values will range from  $x^{(n + 1 \mod n)\lfloor (n + 1) / (n + 1) \rfloor} = x$ to $x^{(z - 1 \mod n)\lfloor (z - 1) / (n + 1) \rfloor}$ which (assuming $z = 2n$) equals $x^{(2n - 1 \mod n)\lfloor (2n - 1) / (n + 1) \rfloor} = x^{n - 1}$, and $x^{(z \mod n)\lfloor z / (n + 1) \rfloor} = x^{(2n \mod n)\lfloor 2n / (n + 1) \rfloor} = 1$.
+All of these properties should be evident from the previous structure; for all values ranging from $f_{n + 1}$ to $f_{z}$ what will actually happen is that all of those will be folded into the first "half" because the relative $x$ values will range from  $x^{(n + 1 \mod n)\lfloor (n + 1) / (n + 1) \rfloor} = x$ to $x^{(z - 1 \mod n)\lfloor (z - 1) / (n + 1) \rfloor}$ which (assuming $z = 2n$) equals $x^{(2n - 1 \mod n)\lfloor (2n - 1) / (n + 1) \rfloor} = x^{n - 1}$, and $x^{(z \mod n)\lfloor z / (n + 1) \rfloor} = x^{(2n \mod n)\lfloor 2n / (n + 1) \rfloor} = 1$. At least I guess so, I'm not sure if I've lost my mental sanity or what. Everything should be tested etc. but I don't have the time.
 
+In general we cannot divide evenly by a nonzero polynomial, since a polynomial $f(x)$ with $deg(f(x)) > 0$ has no multiplicative inverse, therefore $F[x]$ is a ring [ rings don't have inverses, while they are the same regarding other properties ], not a field. We now develop a series of properties of $F[x]$ that resemble those of $Z$.
 
+### 7.5.1
+
+A polynomial is said to be a divisor of a polynomial $f(x)$ if $f(x)$ is a polynomial multiple of $g(x)$, that is, $f(x) = q(x)g(x)$ for some polynomial $q(x)$. Thus, all polynomials are trivially divisors of the zero polynomial. Polynomials which have polynomials inverses are the nonzero degree-0 polynomials $\beta \in F^{\star} = F - \\{ 0 \\}$. These are called units of $F[x]$. If $u(x)$ is a unit polynomial and $g(x)$ is a divisor of $f(x)$, then $u(x)g(x)$ is a divisor of $f(x)$ and $g(x)$ is a divisor of $u(x)f(x)$. Thus, the factorization of a polynomial can be unique only up to a unit polynomial $u(x)$, and $u(x)f(x)$ has the same divisors as $f(x)$. 
+
+See that things are getting stranger.
+
+A _monic polynomial_ is a nonzero polynomial $f(x)$ of degree $m$ with high-order coefficient $f_{m}$ equal to $1$, i.e. $f(x) = f_{0} + f_{1}x + f_{2}x^{2} + \dots + x^{m}$. Every nonzero polynomial $g(x)$ may be written as the product $g(x) = g_{m}f(x)$ of a monic polynomial $f(x)$ of the same degree with a unit polynomial $u(x) = g_{m}$, and the product of two monic polynomials is monic. We may therefore consider only factorizations of monic polynomials into products of monic polynomials.
+
+Every nonzero polynomial $f(x)$ is divisible by $1$ and $f(x)$; these divisors are called trivial. A polynomial $g(x)$ is said to be a factor of a polynomial $f(x)$ if $g(x)$ is monic and a nontrivial divisor of $f(x)$. Thus the degree of any factor $g(x)$ of $f(x)$ satisfies $1 \leq deg(g(x)) \leq deg(f(x))$.
+
+A polynomial $g(x)$ of degree $1$ or more that has no factors is called an _irreducible polynomial_, and a monic irreducible polynomial is called a _prime polynomial_. Now we are going to show that every monic polynomial has a unique factorization into prime polynomials factors.
 
 
 
