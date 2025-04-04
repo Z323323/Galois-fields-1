@@ -169,8 +169,8 @@ $->$<br>
 $h(x)g(x) = \sum_{i = 0}^{z} \sum_{j = 0}^{i} a_{j}b_{i - j} x^{i}$<br>
 $-renamingVars + excludingX + extractingFx>$<br>
 $[[ f_{i} = \sum_{j = 0}^{i} h_{j}g_{i - j} ]]$<br>
-$-restoringPrev + addingMoreControl>$<br>
-$h(x)g(x) = \sum_{i = 0}^{z} \sum_{j = 0}^{i} a_{j + (i \mod n)\lfloor i / n \rfloor}b_{i - j} x^{i}$<br>
+$-restoringPrev + addingMoreControl + keepingXOut>$<br>
+$h(x)g(x) = \sum_{i = 0}^{z} \sum_{j = 0}^{j \leq i \mod n} a_{j + (i \mod n)\lfloor i / n \rfloor}b_{(i - j) - (i \mod n)\lfloor i / n \rfloor}$<br>
 $->$<br>
 $f_{0} = h_{0}g_{0}$<br>
 $f_{1} = h_{0}g_{1} + h_{1}g_{0}$<br>
@@ -180,15 +180,17 @@ $f_{4} = h_{0}g_{4} + h_{1}g_{3} + h_{2}g_{2} + h_{3}g_{1} + h_{4}g_{0}$<br>
 $f_{5} = h_{0}g_{5} + h_{1}g_{4} + h_{2}g_{3} + h_{3}g_{2} + h_{4}g_{1} + h_{5}g_{0}$<br>
 $\dots$<br>
 $f_{n} = h_{0}g_{n} + h_{1}g_{n - 1} + h_{2}g_{n - 2} + \dots + h_{n - 2}g_{2} + h_{n - 1}g_{1} + h_{n}g_{0}$<br>
-$f_{n + 1} = h_{0}g_{n} + h_{1}g_{n - 1} + h_{2}g_{n - 2} + \dots + h_{n - 2}g_{2} + h_{n - 1}g_{1} + h_{n}g_{0}$<br>
+$f_{n + 1} = h_{1}g_{n} + h_{2}g_{n - 1} + h_{3}g_{n - 2} + \dots + h_{n - 1}g_{2} + h_{n}g_{1}$<br>
+$f_{n + 2} = h_{2}g_{n} + h_{3}g_{n - 1} + h_{4}g_{n - 2} + \dots + h_{n}g_{2}$<br>
 $\dots$<br>
-
-$f_{k - 5} = h_{0}g_{k - 5} + h_{1}g_{k - 4} + h_{2}g_{k - 3} + h_{3}g_{k - 2} + h_{4}g_{k - 1} + h_{5}g_{k}$<br>
-$f_{k - 4} = h_{0}g_{k - 4} + h_{1}g_{k - 3} + h_{2}g_{k - 2} + h_{3}g_{k - 1} + h_{4}g_{k}$<br>
-$f_{k - 3} = h_{0}g_{k - 3} + h_{1}g_{k - 2} + h_{2}g_{k - 1} + h_{3}g_{k}$<br>
-$f_{k - 2} = h_{0}g_{k - 2} + h_{1}g_{k - 1} + h_{2}g_{k}$<br>
-$f_{k - 1} = h_{0}g_{k - 1} + h_{1}g_{k}$<br>
-$f_{k} = h_{0}g_{k}$
+Note $z$ should be at most $2n$.
+$->$<br>
+$f_{z - 5} = h_{n }g_{k - 5} + h_{1}g_{k - 4} + h_{2}g_{k - 3} + h_{3}g_{k - 2} + h_{4}g_{k - 1} + h_{5}g_{k}$<br>
+$f_{z - 4} = h_{0}g_{k - 4} + h_{1}g_{k - 3} + h_{2}g_{k - 2} + h_{3}g_{k - 1} + h_{4}g_{k}$<br>
+$f_{z - 3} = h_{0}g_{k - 3} + h_{1}g_{k - 2} + h_{2}g_{k - 1} + h_{3}g_{k}$<br>
+$f_{z - 2} = h_{0}g_{k - 2} + h_{1}g_{k - 1} + h_{2}g_{k}$<br>
+$f_{z - 1} = h_{0}g_{k - 1} + h_{1}g_{k}$<br>
+$f_{z} = h_{0}g_{k}$
 
 $----$
 
