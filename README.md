@@ -168,7 +168,7 @@ $z = n + m$<br>
 $->$<br>
 $h(x)g(x) = \sum_{i = 0}^{z} \sum_{j = 0}^{i} a_{j}b_{i - j} x^{i}$<br>
 $-renaming-vars>$<br>
-$f_{i} = \sum_{j = 0}^{i} h_{j}g_{i - j}$<br>
+$[[ f_{i} = \sum_{j = 0}^{i} h_{j}g_{i - j} ]]$<br>
 $->$<br>
 $f_{0} = h_{0}g_{0}$<br>
 $f_{1} = h_{0}g_{1} + h_{1}g_{0}$<br>
