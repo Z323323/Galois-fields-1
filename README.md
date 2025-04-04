@@ -170,7 +170,8 @@ $h(x)g(x) = \sum_{i = 0}^{z} \sum_{j = 0}^{i} a_{j}b_{i - j} x^{i}$<br>
 $-renamingVars + excludingX + extractingFx>$<br>
 $[[ f_{i} = \sum_{j = 0}^{i} h_{j}g_{i - j} ]]$<br>
 $-restoringPrev + addingMoreControl + keepingXOut>$<br>
-$h(x)g(x) = \sum_{i = 0}^{z} \sum_{j = 0}^{j \leq i \mod n} a_{j + (i \mod n)\lfloor i / n \rfloor}b_{(i - j) - (i \mod n)\lfloor i / n \rfloor}$<br>
+Note that the following formula (should) hold only for $m \leq n$, otherwise the floor function will produce inconsistent results.
+$h(x)g(x) = \sum_{i = 0}^{z} \sum_{j = 0}^{j \leq i (\mod n + 1)} h_{j + (i \mod n)\lfloor i / (n + 1) \rfloor}g_{(i - j) - (i \mod n)\lfloor i / (n + 1) \rfloor}$<br>
 $->$<br>
 $f_{0} = h_{0}g_{0}$<br>
 $f_{1} = h_{0}g_{1} + h_{1}g_{0}$<br>
@@ -198,24 +199,7 @@ If two nonzero polynomials are multiplied, then their degrees add; i.e., $deg(h(
 
 The set $F[x]$ has many of the properties of a field. It's an abelian group under addition, whose identity is the zero polynomial $0 \in F[x]$. It is closed under multiplication, which is both associative and commutative and which distributes over addition. It has a multiplicative identity $1 \in F[x]$ and the cancellation law holds.
 
-All of these properties should be evident from the previous structure; for all values ranging from $f_{n + 1}$ to $f_{z}$ what will actually happen is that all of those will be folded into the first "half" because the relative $x$ values will range from 
-
-$x^{n + 1 \mod n}$<br>
-$->$<br>
-$x$
-
-to
-
-$x^{z - 1 \mod n}$<br>
-$->$<br>
-(assuming $z = 2n$)<br>
-$x^{n - 1}$
-
-and
-
-$x^{z \mod n}$<br>
-$->$<br>
-$x^{n}$
+All of these properties should be evident from the previous structure; for all values ranging from $f_{n + 1}$ to $f_{z}$ what will actually happen is that all of those will be folded into the first "half" because the relative $x$ values will range from  $x^{(n + 1 \mod n)\lfloor (n + 1) / (n + 1) \rfloor} = x$ to $x^{(z - 1 \mod n)\lfloor (z - 1) / (n + 1) \rfloor}$ which (assuming $z = 2n$) equals $x^{(2n - 1 \mod n)\lfloor (2n - 1) / (n + 1) \rfloor} = x^{n - 1}$, and $x^{(z \mod n)\lfloor z / (n + 1) \rfloor} = x^{(2n \mod n)\lfloor 2n / (n + 1) \rfloor} = 1$.
 
 
 
