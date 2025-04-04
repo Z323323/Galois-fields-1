@@ -145,13 +145,12 @@ $f(x) = f_{0} + f_{1}x + f_{2}x^{2} + \dots + f_{m}x^{m}$
 
 where $f_{i} \in F, 0 \leq i \leq m$ and $f_{m} \neq 0$. We have $deg(f(x)) = m$. The symbol $x$ represents an indeterminate, not an element of $F$, i.e., two polynomials are different if and only if their coefficients are different. [ Over the real field $R$, a polynomial $f(x)$ is sometimes regarded as a function $f: R \rightarrow R$ and two polynomials over $R$ are different iff the corresponding polynomial functions are different. However, over finite fields it's not, i.e. over $F_{2}$ the polynomial functions $x$ and $x^{2}$ both map $0 \rightarrow 0, 1 \rightarrow 1$, yet $x$ and $x^{2}$ are different. ] The nonzero polynomials of degree $0$ are simply the nonzero field elements $f_{0} \in F$. There's also a special _zero polynomial_ $f(x) = 0$ whose degree is defined by convention as $deg(0) = - \infty$. The set of all polynomials over $F$ in an indeterminate $x$ is denoted by $F[x]$.
 
-The rules for adding, subtracting or multiplying polynomials are the same over a general field $F$ over $R$, except that coefficient operations are in $F$. In particular, addition and subtraction are performed componentwise (we can't add two different-degree indeterminates). For multiplication, the coefficients of a polynomial product $f(x) = h(x)g(x)$ are determined by _convolution_:
+The rules for adding, subtracting or multiplying polynomials are the same over a general field $F$ over $R$, except that coefficient operations are in $F$. In particular, addition and subtraction are performed componentwise (we can't add two different-degree indeterminates). For multiplication, the coefficients of a polynomial product $f(x) = h(x)g(x)$ are determined by _convolution_ (I guess $i \geq j$ is implied, even though in general I guess we'll have $i = j$ but I could be wrong):
 
-$f_{i} = \sum_{j = 0}^{i} h_{j}g_{i - j}$
-
-Let's say something about this arcane magic called _convolution_. We have sequentially:
-
-$h_{0}g_{i} + h_{1}g_{i - 1} + \dots + h_{i}j_{0}$
+$f_{i} = \sum_{j = 0}^{i} h_{j}g_{i - j}$<br>
+$->$<br>
+$f_{0} = h_{0}g_{i} + h_{1}g_{i - 1} + \dots + h_{i}j_{0}$<br>
+$f_{1} = h_{1}g_{
 
 
 
