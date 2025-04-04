@@ -194,7 +194,28 @@ $f_{z} = h_{n}g_{n}$
 
 $----$
 
+If two nonzero polynomials are multiplied, then their degrees add; i.e., $deg(h(x)g(x)) = deg(h(x)) + deg(g(x))$. The document reports _"The convention_ $deg(0) = - \infty$ _ensures that this formula continues to hold when_ $h(x)$ _or_ $g(x)$ _is the zero polynomial."_.
 
+The set $F[x]$ has many of the properties of a field. It's an abelian group under addition, whose identity is the zero polynomial $0 \in F[x]$. It is closed under multiplication, which is both associative and commutative and which distributes over addition. It has a multiplicative identity $1 \in F[x]$ and the cancellation law holds.
+
+All of these properties should be evident from the previous structure; for all values ranging from $f_{n + 1}$ to $f_{z}$ what will actually happen is that all of those will be folded into the first "half" because the relative $x$ values will range from 
+
+$x^{n + 1 \mod n}$<br>
+$->$<br>
+$x$
+
+to
+
+$x^{z - 1 \mod n}$<br>
+$->$<br>
+(assuming $z = 2n$)<br>
+$x^{n - 1}$
+
+and
+
+$x^{z \mod n}$<br>
+$->$<br>
+$x^{n}$
 
 
 
