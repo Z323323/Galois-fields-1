@@ -128,7 +128,12 @@ The prime $p$ is called **characteristic** of $F_{p}$. Since the $p-fold$ sum of
 
 **Theorem 7.7** The integers $\\{ 1, 1 \oplus 1, \dots \\}$ of any finite field $F_{q}$ form a subfield $F_{p} \subseteq F_{q}$ with a prime number $p$ of elements, where $p$ is the characteristic of $F_{q}$.
 
-This section is mainly a bunch of formalisms to show that is possible to define a subfield using the element $1$ as generator to produce the additive subgroup, and use the isomorphism rules to show that the generated group is a fine multiplicative group (or something like that lol). I don't think this section will be of fundamental importance along the way. The actual magic is to understand how to create field of $p^{m}$ elements, and the next sections are what really matters.
+This section is mainly a bunch of formalisms to show that is possible to define a subfield using the element $1$ as generator to produce the additive subgroup, and use the isomorphism rules to show that the generated group is a fine multiplicative group (or something like that lol). I don't think this section will be of outmost importance along the way. The actual magic is to understand how to create fields of $p^{m}$ elements, and the next sections are what really matters.
+
+Before going over, let me spend a couple words about the primality constraint of $n$.
+1. If we need to define a field, we will necessarily need $1$ in the set.
+2. If we have a $1$ in the set, $1$ will be a generator for $Z_{n}^{+}$.
+3. 2. implies that if $n$ is not prime then $a, b \in Z_{n} | n = ab$ implies $ab \equiv 0 \mod n$, so the set of nonzero elements of $Z_{n}$ is not closed under multiplication mod $n$.
 
 ### 7.5 Polynomials
 
