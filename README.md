@@ -179,18 +179,19 @@ $f_{3} = h_{0}g_{3} + h_{1}g_{2} + h_{2}g_{1} + h_{3}g_{0}$<br>
 $f_{4} = h_{0}g_{4} + h_{1}g_{3} + h_{2}g_{2} + h_{3}g_{1} + h_{4}g_{0}$<br>
 $f_{5} = h_{0}g_{5} + h_{1}g_{4} + h_{2}g_{3} + h_{3}g_{2} + h_{4}g_{1} + h_{5}g_{0}$<br>
 $\dots$<br>
+Assuming $n = m$ here (for clarity), should substitute $n$ with $m$ otherwise.<br>
 $f_{n} = h_{0}g_{n} + h_{1}g_{n - 1} + h_{2}g_{n - 2} + \dots + h_{n - 2}g_{2} + h_{n - 1}g_{1} + h_{n}g_{0}$<br>
 $f_{n + 1} = h_{1}g_{n} + h_{2}g_{n - 1} + h_{3}g_{n - 2} + \dots + h_{n - 1}g_{2} + h_{n}g_{1}$<br>
 $f_{n + 2} = h_{2}g_{n} + h_{3}g_{n - 1} + h_{4}g_{n - 2} + \dots + h_{n}g_{2}$<br>
 $\dots$<br>
-Note $z$ should be at most $2n$.
+Note $z$ should be at most $2n$ (assuming $z = 2n$ here).<br>
 $->$<br>
-$f_{z - 5} = h_{n }g_{k - 5} + h_{1}g_{k - 4} + h_{2}g_{k - 3} + h_{3}g_{k - 2} + h_{4}g_{k - 1} + h_{5}g_{k}$<br>
-$f_{z - 4} = h_{0}g_{k - 4} + h_{1}g_{k - 3} + h_{2}g_{k - 2} + h_{3}g_{k - 1} + h_{4}g_{k}$<br>
-$f_{z - 3} = h_{0}g_{k - 3} + h_{1}g_{k - 2} + h_{2}g_{k - 1} + h_{3}g_{k}$<br>
-$f_{z - 2} = h_{0}g_{k - 2} + h_{1}g_{k - 1} + h_{2}g_{k}$<br>
-$f_{z - 1} = h_{0}g_{k - 1} + h_{1}g_{k}$<br>
-$f_{z} = h_{0}g_{k}$
+$f_{z - 5} = h_{n - 5}g_{n} + h_{n - 4}g_{n - 1} + h_{n - 3}g_{n - 2} + h_{n - 2}g_{n - 3} + h_{n - 1}g_{n - 4} + h_{n}g_{n - 5}$<br>
+$f_{z - 4} = h_{n - 4}g_{n} + h_{n - 3}g_{n - 1} + h_{n - 2}g_{n - 2} + h_{n - 1}g_{n - 3} + h_{n}g_{k - 4}$<br>
+$f_{z - 3} = h_{n - 3}g_{n} + h_{n - 2}g_{n - 1} + h_{n - 1}g_{n - 2} + h_{n}g_{n - 3}$<br>
+$f_{z - 2} = h_{n - 2}g_{n} + h_{n - 1}g_{n - 1} + h_{n}g_{n - 2}$<br>
+$f_{z - 1} = h_{n - 1}g_{n} + h_{n}g_{n - 1}$<br>
+$f_{z} = h_{n}g_{n}$
 
 $----$
 
