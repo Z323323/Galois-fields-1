@@ -132,8 +132,8 @@ This section is mainly a bunch of formalisms to show that is possible to define 
 
 Before going over, let me spend a couple words about the primality constraint of $n$.
 1. If we need to define a field, we will necessarily need $1$ in the set.
-2. If we have a $1$ in the set, $1$ will be a generator for $Z_{n}^{+}$.
-3. 2. implies that if $n$ is not prime then $a, b \in Z_{n} | n = ab$ implies $ab \equiv 0 \mod n$, so the set of nonzero elements of $Z_{n}$ is not closed under multiplication mod $n$.
+2. If we have a $1$ in the set, $1$ will be a generator for $Z_{n}^{+}$, or in other words, the presence of $1$ in the field set force the field set to contain every number in a set of the form $\\{ 0, 1, 2, 3, \dots, n - 1 \\}$, because there are no constraints in the usage of the binary operations.
+3. [2.] implies that if $n$ is not prime then $a, b \in Z_{n} | n = ab$ implies $ab \equiv 0 \mod n$, so the set of nonzero elements of $Z_{n}$ is not closed under multiplication mod $n$.
 
 ### 7.5 Polynomials
 
