@@ -151,6 +151,8 @@ $f_{i} = \sum_{j = 0}^{i} h_{j}g_{i - j}$
 
 Let's get the arcane magic behind convolution.
 
+$----$
+
 ### Convolution
 
 $h(x) = \sum_{i = 0}^{n} a_{i}x_{i}$<br>
@@ -164,7 +166,7 @@ $\sum_{i = 0}^{n}\sum_{j = 0}^{m} a_{i}b_{j}x^{k}$<br>
 $-artifice>$<br>
 $z = n + m$<br>
 $->$<br>
-$h(x)g(x) = \sum_{i = 0}^{z} \sum_{j = 0}^{i} a_{j}b_{i - j} x^{i}$
+$h(x)g(x) = \sum_{i = 0}^{z} \sum_{j = 0}^{i} a_{j}b_{i - j} x^{i}$<br>
 $-renaming-vars>$<br>
 $f_{i} = \sum_{j = 0}^{i} h_{j}g_{i - j}$<br>
 $->$<br>
@@ -175,9 +177,9 @@ $f_{3} = h_{0}g_{3} + h_{1}g_{2} + h_{2}g_{1} + h_{3}g_{0}$<br>
 $f_{4} = h_{0}g_{4} + h_{1}g_{3} + h_{2}g_{2} + h_{3}g_{1} + h_{4}g_{0}$<br>
 $f_{5} = h_{0}g_{5} + h_{1}g_{4} + h_{2}g_{3} + h_{3}g_{2} + h_{4}g_{1} + h_{5}g_{0}$<br>
 $\dots$<br>
-$f_{k} = h_{0}g_{k} + h_{1}g_{k - 1} + h_{2}g_{k - 2} + \dots + h_{k - 2}g_{2} + h_{k - 1}g_{1} + h_{k}g_{0}$<br>
-
+$f_{n} = h_{0}g_{n} + h_{1}g_{n - 1} + h_{2}g_{n - 2} + \dots + h_{n - 2}g_{2} + h_{n - 1}g_{1} + h_{n}g_{0}$<br>
 $\dots$<br>
+
 $f_{k - 5} = h_{0}g_{k - 5} + h_{1}g_{k - 4} + h_{2}g_{k - 3} + h_{3}g_{k - 2} + h_{4}g_{k - 1} + h_{5}g_{k}$<br>
 $f_{k - 4} = h_{0}g_{k - 4} + h_{1}g_{k - 3} + h_{2}g_{k - 2} + h_{3}g_{k - 1} + h_{4}g_{k}$<br>
 $f_{k - 3} = h_{0}g_{k - 3} + h_{1}g_{k - 2} + h_{2}g_{k - 1} + h_{3}g_{k}$<br>
@@ -185,9 +187,7 @@ $f_{k - 2} = h_{0}g_{k - 2} + h_{1}g_{k - 1} + h_{2}g_{k}$<br>
 $f_{k - 1} = h_{0}g_{k - 1} + h_{1}g_{k}$<br>
 $f_{k} = h_{0}g_{k}$
 
-
-
-
+$----$
 
 
 
