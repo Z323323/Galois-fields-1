@@ -249,11 +249,19 @@ where $a_{1}(x), \dots, a_{k}(x)$ and $b_{1}(x), \dots, b_{j}(x)$ are prime poly
 
 We can see that $a_{1}(x)$ cannot appear on the right side of the previous formula, else it could be factored out for an immediate contradiction. Similarly, $b_{1}(x)$ cannot appear on the left. Now, assume $deg(b_{1}(x)) \leq deg(a_{1}(x))$. By the Euclidean division algorithm, $a_{1}(x) = q(x)b_{1}(x) + r(x)$. This last formula could seem like a contradiction since we just said that $b_{1}(x)$ cannot appear on the left, but here it actually won't appear left because the value of $a_{1}(x)$ is not $b_{1}(x)$ but $q(x)b_{1}(x) + r(x)$ which solved doesn't equal $b_{1}(x)$ and we can't even factor $b_{1}(x)$ because of remainder. Now, since $a_{1}(x)$ is irreducible, $r(x) \neq 0$ and $0 \leq deg(r(x)) < deg(b_{1}(x)) \leq deg(a_{1}(x))$. Thus, $r(x)$ has a prime factorization $r(x) = \beta r_{1}(x)\dots r_{n}(x)$, where $\beta$ is the high-order coefficient of $r(x)$ and $b_{1}(x)$ is not a divisor of any of the $r_{1}(x)$, since it has greater degree. Substituting into the previous formula we obtain
 
-$(q(x)b_{1}(x) + \beta r_{1}(x) \dots r_{n}(n))a_{2}(x) \dots a_{k}(x) = b_{1}(x) \dots b_{j}(x)$
+$(q(x)b_{1}(x) + \beta r_{1}(x) \dots r_{n}(x))a_{2}(x) \dots a_{k}(x) = b_{1}(x) \dots b_{j}(x)$<br>
+$->$<br>
+$q(x)b_{1}(x)a_{2}(x) \dots a_{k}(x) + \beta r_{1}(x) \dots r_{n}(x)a_{2}(x) \dots a_{k}(x) = b_{1}(x) \dots b_{j}(x)$<br>
+$->$<br>
+$\beta r_{1}(x) \dots r_{n}(x)a_{2}(x) \dots a_{k}(x) = b_{1}(x) \dots b_{j}(x) - q(x)b_{1}(x)a_{2}(x) \dots a_{k}(x)$<br>
+$->$<br>
+$r_{1}(x) \dots r_{n}(x)a_{2}(x) \dots a_{k}(x) = \beta^{- 1}b_{1}(x) \dots b_{j}(x) - q(x)b_{1}(x)a_{2}(x) \dots a_{k}(x)$<br>
+$->$<br>
+$r_{1}(x) \dots r_{n}(x)a_{2}(x) \dots a_{k}(x) = \beta^{- 1}b_{1}(x)(b_{2}(x) \dots b_{j}(x) - q(x)a_{2}(x) \dots a_{k}(x))$<br>
+$->$<br>
+$f'(x) = r_{1}(x) \dots r_{n}(x)a_{2}(x) \dots a_{k}(x) = \beta^{- 1}b_{1}(x)(b_{2}(x) \dots b_{j}(x) - q(x)a_{2}(x) \dots a_{k}(x))$
 
-or, defining $f'(x) = r_{1}(x) \dots f_{n}(x)a_{2}(x) \dots a_{k}(x)$ and rearranging terms
 
-$f'(x) = r_{1}(x) \dots r_{n}(x)a_{2}(x) \dots a_{k}(x) = \beta^{- 1}b_{1}(x)(b_{2}(x) \dots b_{j}(x) - q(x)a_{2}(x) \dots a_{k}(x))$.
 
 
 
