@@ -4,7 +4,7 @@ This resource extracts every non-trivial result (basically everything) from [htt
 
 ![MEP3](MEP3.jpg)
 
-### 7.2.2 Mod-n arithmetic
+### 7.2.2 $\mod n$ arithmetic
 
 $r \equiv i \mod n$<br>
 $->$<br>
@@ -215,7 +215,7 @@ A polynomial $g(x)$ of degree $1$ or more that has no factors is called an _irre
 
 ### 7.5.2 $\mod g(x)$ arithmetic
 
-Given a monic polynomial $g(x)$ of degree $m$, every polynomial $f(x)$ may be expressed as $f(x) = q(x)g(x) + r(x)$ for some polynomial remainder $r(x)$ such that $deg(r(x)) < m$ and some polynomial quotient $q(x)$. This may be proved by the Euclidean long division algorithm, with component operations in $F$. The resulting quotient $q(x)$ and remainder $r(x)$ are unique. The remainder polynomial $r(x)$ is denoted by $f(x) \equiv r(x) \mod g(x)$. The set of all possible remainder polynomials is the set $R_{F, m} = \\{ r_{0} + r_{1}x + \dots + r_{m - 1}x^{m - 1} | r_{j} \in F, 0 \leq j \leq m - 1 \\}$ whose size is $|R_{F, m}| = |F|^{m}$. Evidently $g(x)$ is a divisor of $f(x)$ if and only if $f(x) \mod g(x) = 0$. Remainder arithmetic using the remainder set $R_{F, m}$ is called "$\mod g(x)$ arithmetic". The rules for mod-g(x) arithmetic follow from the rules for polynomial arithmetic as follows.
+Given a monic polynomial $g(x)$ of degree $m$, every polynomial $f(x)$ may be expressed as $f(x) = q(x)g(x) + r(x)$ for some polynomial remainder $r(x)$ such that $deg(r(x)) < m$ and some polynomial quotient $q(x)$. This may be proved by the Euclidean long division algorithm, with component operations in $F$. The resulting quotient $q(x)$ and remainder $r(x)$ are unique. The remainder polynomial $r(x)$ is denoted by $f(x) \equiv r(x) \mod g(x)$. The set of all possible remainder polynomials is the set $R_{F, m} = \\{ r_{0} + r_{1}x + \dots + r_{m - 1}x^{m - 1} | r_{j} \in F, 0 \leq j \leq m - 1 \\}$ whose size is $|R_{F, m}| = |F|^{m}$. Evidently $g(x)$ is a divisor of $f(x)$ if and only if $f(x) \mod g(x) = 0$. Remainder arithmetic using the remainder set $R_{F, m}$ is called $\mod g(x)$-arithmetic. The rules for $\mod g(x)$-arithmetic follow from the rules for polynomial arithmetic as follows.
 
 Let $r(x) = f(x) \mod g(x)$ and $s(x) = h(x) \mod g(x)$; then, as polynomials, $r(x) = f(x) - q(x)g(x)$ and $s(x) = h(x) - t(x)g(x)$ for some quotient polynomials $q(x)$ and $t(x)$. Then
 
@@ -237,11 +237,15 @@ Every monic polynomial is either irreducible or can be factored into a product o
 
 **Theorem 7.8 (Unique factorization of polynomials)** Over any field $F$, every monic polynomial $f(x) \in F[x]$ of degree $m \geq 1$ may be written in the form
 
-$f(x) = \prod_{i = 1}^{k} a_{i}(x)
+$f(x) = \prod_{i = 1}^{k} a_{i}(x)$
 
 where each $a_{i}(x), 1 \leq i \leq k$, is a prime polynomial in $F[x]$. This factorization is unique, up to the order of the factors (note that $a_{i}(x) \neq a_{i}x$).
 
-**Proof**. We have alread shown that $f(x)$ may be factored in this way, so we need only prove uniqueness. Assume hypothetically that the theorem is false and let $m$ be the smallest degree such that there exists a degree-m monic polynomial $f(x)$ with more than one such factorization.
+**Proof**. We have alread shown that $f(x)$ may be factored in this way, so we need only prove uniqueness. Assume hypothetically that the theorem is false and let $m$ be the smallest degree such that there exists a degree-m monic polynomial $f(x)$ with more than one such factorization
+
+$f(x) = a_{1}(x) \dots a_{k}(x) = b_{1}(x) \dots b_{j}(x)$ and $j, k \geq 1$
+
+where $a_{1}(x), \dots, a_{k}(x)$ and $b_{1}(x), \dots, b_{j}(x)$ are prime polynomials.
 
 
 
