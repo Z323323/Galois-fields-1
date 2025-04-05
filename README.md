@@ -19,13 +19,13 @@ $r + s = i + j + (q + t)n$<br>
 $->$<br>
 $r + s \equiv i + j \mod n$<br>
 $->$<br>
-$r \oplus s$<br>
+$r \oplus s = i + j$<br>
 $---$<br>
 $rs = ij + (qj + ti)n + qtn^{2}$<br>
 $->$<br>
 $rs \equiv ij \mod n$<br>
 $->$<br>
-$r \otimes s$
+$r \otimes s = ij$
 
 ### 7.3 Additive groups
 
@@ -239,13 +239,15 @@ Every monic polynomial is either irreducible or can be factored into a product o
 
 $f(x) = \prod_{i = 1}^{k} a_{i}(x)$
 
-where each $a_{i}(x), 1 \leq i \leq k$, is a prime polynomial in $F[x]$. This factorization is unique, up to the order of the factors (note that $a_{i}(x) \neq a_{i}x$).
+where each $a_{i}(x), 1 \leq i \leq k$, is a prime polynomial in $F[x]$. This factorization is unique, up to the order of the factors (note that $a_{i}(x) \neq a_{i}x$ in this context).
 
-**Proof**. We have alread shown that $f(x)$ may be factored in this way, so we need only prove uniqueness. Assume hypothetically that the theorem is false and let $m$ be the smallest degree such that there exists a degree-m monic polynomial $f(x)$ with more than one such factorization
+**Proof**. We have already shown that $f(x)$ may be factored in this way, so we need only prove uniqueness. Assume hypothetically that the theorem is false and let $m$ be the smallest degree such that there exists a $degree-m$ monic polynomial $f(x)$ with more than one such factorization
 
 $f(x) = a_{1}(x) \dots a_{k}(x) = b_{1}(x) \dots b_{j}(x)$ and $j, k \geq 1$
 
-where $a_{1}(x), \dots, a_{k}(x)$ and $b_{1}(x), \dots, b_{j}(x)$ are prime polynomials.
+where $a_{1}(x), \dots, a_{k}(x)$ and $b_{1}(x), \dots, b_{j}(x)$ are prime polynomials. We are going to show that this implies a polynomial $f'(x)$ with degree less than $m$ with non-unique factorization, and this contradiction will prove the theorem.
+
+We can see that $a_{1}(x)$ cannot appear on the right side of the previous formula, else it could be factored out for an immediate contradiction. Similarly, $b_{1}(x)$ cannot appear on the left. Now, assume $deg(b_{1}(x)) \leq deg(a_{1}(x))$. By the Euclidean division algorithm, $a_{1}(x) = q(x)b_{1}(x) + r(x)$.
 
 
 
