@@ -213,16 +213,16 @@ Every nonzero polynomial $f(x)$ is divisible by $1$ and $f(x)$; these divisors a
 
 A polynomial $g(x)$ of degree $1$ or more that has no factors is called an _irreducible polynomial_, and a monic irreducible polynomial is called a _prime polynomial_. Now we are going to show that every monic polynomial has a unique factorization into prime polynomials factors.
 
-### 7.5.2 Mod-g(x) arithmetic
+### 7.5.2 $\mod g(x)$ arithmetic
 
-Given a monic polynomial $g(x)$ of degree $m$, every polynomial $f(x)$ may be expressed as $f(x) = q(x)g(x) + r(x)$ for some polynomial remainder $r(x)$ such that $deg(r(x)) < m$ and some polynomial quotient $q(x)$. This may be proved by the Euclidean long division algorithm, with component operations in $F$. The resulting quotient $q(x)$ and remainder $r(x)$ are unique. The remainder polynomial $r(x)$ is denoted by $f(x) \equiv r(x) \mod g(x)$. The set of all possible remainder polynomials is the set $R_{F, m} = \\{ r_{0} + r_{1}x + \dots + r_{m - 1}x^{m - 1} | r_{j} \in F, 0 \leq j \leq m - 1 \\}$ whose size is $|R_{F, m}| = |F|^{m}$. Evidently $g(x)$ is a divisor of $f(x)$ if and only if $f(x) \mod g(x) = 0$. Remainder arithmetic using the remainder set $R_{F, m}$ is called "mod-g(x) arithmetic". The rules for mod-g(x) arithmetic follow from the rules for polynomial arithmetic as follows.
+Given a monic polynomial $g(x)$ of degree $m$, every polynomial $f(x)$ may be expressed as $f(x) = q(x)g(x) + r(x)$ for some polynomial remainder $r(x)$ such that $deg(r(x)) < m$ and some polynomial quotient $q(x)$. This may be proved by the Euclidean long division algorithm, with component operations in $F$. The resulting quotient $q(x)$ and remainder $r(x)$ are unique. The remainder polynomial $r(x)$ is denoted by $f(x) \equiv r(x) \mod g(x)$. The set of all possible remainder polynomials is the set $R_{F, m} = \\{ r_{0} + r_{1}x + \dots + r_{m - 1}x^{m - 1} | r_{j} \in F, 0 \leq j \leq m - 1 \\}$ whose size is $|R_{F, m}| = |F|^{m}$. Evidently $g(x)$ is a divisor of $f(x)$ if and only if $f(x) \mod g(x) = 0$. Remainder arithmetic using the remainder set $R_{F, m}$ is called "$\mod g(x)$ arithmetic". The rules for mod-g(x) arithmetic follow from the rules for polynomial arithmetic as follows.
 
 Let $r(x) = f(x) \mod g(x)$ and $s(x) = h(x) \mod g(x)$; then, as polynomials, $r(x) = f(x) - q(x)g(x)$ and $s(x) = h(x) - t(x)g(x)$ for some quotient polynomials $q(x)$ and $t(x)$. Then
 
 $f(x) + h(x) = r(x) + s(x) + (q(x) + t(x))g(x)$<br>
-$->$
+$->$<br>
 $f(x) + h(x) \equiv r(x) + s(x) \mod g(x)$<br>
-$->$
+$->$<br>
 $f(x) \oplus h(x) = r(x) + s(x)$<br>
 $and$<br>
 $f(x)h(x) = (r(x) + q(x)g(x))(s(x) + t(x)g(x)) = r(x)s(x) + (q(x)s(x) + t(x)r(x))g(x) + q(x)t(x)g^{2}(x)$<br>
