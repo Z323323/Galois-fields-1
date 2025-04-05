@@ -220,8 +220,30 @@ Given a monic polynomial $g(x)$ of degree $m$, every polynomial $f(x)$ may be ex
 Let $r(x) = f(x) \mod g(x)$ and $s(x) = h(x) \mod g(x)$; then, as polynomials, $r(x) = f(x) - q(x)g(x)$ and $s(x) = h(x) - t(x)g(x)$ for some quotient polynomials $q(x)$ and $t(x)$. Then
 
 $f(x) + h(x) = r(x) + s(x) + (q(x) + t(x))g(x)$<br>
-$and$
-$f(x)h(x) = (r(x) + q(x)g(x))(s(x) + t(x)g(x)) = r(x)s(x) + (q(x)s(x) + t(x)r(x))g(x) + q(x)t(x)g^{2}(x)$
+$->$
+$f(x) + h(x) \equiv r(x) + s(x) \mod g(x)$<br>
+$->$
+$f(x) \oplus h(x) = r(x) + s(x)$<br>
+$and$<br>
+$f(x)h(x) = (r(x) + q(x)g(x))(s(x) + t(x)g(x)) = r(x)s(x) + (q(x)s(x) + t(x)r(x))g(x) + q(x)t(x)g^{2}(x)$<br>
+$->$<br>
+$f(x)h(x) \equiv r(x)s(x) \mod g(x)$<br>
+$->$<br>
+$f(x) \otimes h(x) = r(x)s(x)$
+
+### 7.5.3 Unique factorization
+
+Every monic polynomial is either irreducible or can be factored into a product of monic polynomial factors, each of lower degree (this fact can be easily checked by looking at the convolution dissection I provided above, tip: $f_{z} = h_{n}g_{n}$). In turn, if a factor is not irreducible, it can be factored further (ez). Since factor degrees are decreasing but bounded below by $1$, we must eventually arrive at a product of monic irreducible prime polynomials. The following theorem shows that there is only one such set of prime polynomial factors, regardless of the order in which the polynomial is factored.
+
+**Theorem 7.8 (Unique factorization of polynomials)** Over any field $F$, every monic polynomial $f(x) \in F[x]$ of degree $m \geq 1$ may be written in the form
+
+$f(x) = \prod_{i = 1}^{k} a_{i}(x)
+
+where each $a_{i}(x), 1 \leq i \leq k$, is a prime polynomial in $F[x]$. This factorization is unique, up to the order of the factors (note that $a_{i}(x) \neq a_{i}x$).
+
+**Proof**. We have alread shown that $f(x)$ may be factored in this way, so we need only prove uniqueness. Assume hypothetically that the theorem is false and let $m$ be the smallest degree such that there exists a degree-m monic polynomial $f(x)$ with more than one such factorization.
+
+
 
 
 
