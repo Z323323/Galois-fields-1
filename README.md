@@ -155,7 +155,7 @@ $----$
 
 ### Convolution deep dive
 
-$h(x) = \sum_{i = 0}^{n} a_{i}x_{i}$<br>
+$h(x) = \sum_{i = 0}^{n} a_{i}x^{i}$<br>
 $g(x) = \sum_{j = 0}^{m} b_{j}x^{j}$<br>
 $->$<br>
 $h(x)g(x) = \sum_{i = 0}^{n}\sum_{j = 0}^{m} a_{i}b_{j}x^{i}x^{j}$<br>
@@ -180,7 +180,7 @@ $f_{3} = h_{0}g_{3} + h_{1}g_{2} + h_{2}g_{1} + h_{3}g_{0}$<br>
 $f_{4} = h_{0}g_{4} + h_{1}g_{3} + h_{2}g_{2} + h_{3}g_{1} + h_{4}g_{0}$<br>
 $f_{5} = h_{0}g_{5} + h_{1}g_{4} + h_{2}g_{3} + h_{3}g_{2} + h_{4}g_{1} + h_{5}g_{0}$<br>
 $\dots$<br>
-Assuming $n = m$ here (for clarity), should substitute $n$ with $m$ otherwise.<br>
+Assuming $n = m$ for clarity.<br>
 $f_{n} = h_{0}g_{n} + h_{1}g_{n - 1} + h_{2}g_{n - 2} + \dots + h_{n - 2}g_{2} + h_{n - 1}g_{1} + h_{n}g_{0}$<br>
 $f_{n + 1} = h_{1}g_{n} + h_{2}g_{n - 1} + h_{3}g_{n - 2} + \dots + h_{n - 1}g_{2} + h_{n}g_{1}$<br>
 $f_{n + 2} = h_{2}g_{n} + h_{3}g_{n - 1} + h_{4}g_{n - 2} + \dots + h_{n}g_{2}$<br>
@@ -199,21 +199,30 @@ If two nonzero polynomials are multiplied, then their degrees add; i.e., $deg(h(
 
 The set $F[x]$ has many of the properties of a field. It's an abelian group under addition, whose identity is the zero polynomial $0 \in F[x]$. It is closed under multiplication, which is both associative and commutative and which distributes over addition. It has a multiplicative identity $1 \in F[x]$ and the cancellation law holds.
 
-All of these properties should be evident from the previous structure; for all values ranging from $f_{n + 1}$ to $f_{z}$ what will actually happen is that all of those will be folded into the first "half" because the relative $x$ values will range from  $x^{(n + 1 \mod n)\lfloor (n + 1) / (n + 1) \rfloor} = x$ to $x^{(z - 1 \mod n)\lfloor (z - 1) / (n + 1) \rfloor}$ which (assuming $z = 2n$) equals $x^{(2n - 1 \mod n)\lfloor (2n - 1) / (n + 1) \rfloor} = x^{n - 1}$, and $x^{(z \mod n)\lfloor z / (n + 1) \rfloor} = x^{(2n \mod n)\lfloor 2n / (n + 1) \rfloor} = 1$. At least I guess so, I'm not sure if I've lost my mental sanity or what. Everything should be tested etc. but I don't have the time.
+All of these properties should be evident from the previous structure; for all values ranging from $f_{n + 1}$ to $f_{z}$ what will probably happen is that all of those will be folded into the first "half" (assuming a modulo operation which is capped at $x^{n}$) because the relative $x$ values will range from  $x^{n + 1} = x$ to $x^{z - 1}$ which (assuming $z = 2n$) equals $x^{2n - 1} = x^{n - 1}$, and $x^{z} = x^{2n} = x^{0} = 1$. Note these are just hypotheses by the way, because we still haven't explored modulo operations involving polynomials.
 
 In general we cannot divide evenly by a nonzero polynomial, since a polynomial $f(x)$ with $deg(f(x)) > 0$ has no multiplicative inverse, therefore $F[x]$ is a ring [ rings don't have inverses, while they are the same regarding other properties ], not a field. We now develop a series of properties of $F[x]$ that resemble those of $Z$.
 
-### 7.5.1
+### 7.5.1 Definitions
 
 A polynomial is said to be a divisor of a polynomial $f(x)$ if $f(x)$ is a polynomial multiple of $g(x)$, that is, $f(x) = q(x)g(x)$ for some polynomial $q(x)$. Thus, all polynomials are trivially divisors of the zero polynomial. Polynomials which have polynomials inverses are the nonzero degree-0 polynomials $\beta \in F^{\star} = F - \\{ 0 \\}$. These are called units of $F[x]$. If $u(x)$ is a unit polynomial and $g(x)$ is a divisor of $f(x)$, then $u(x)g(x)$ is a divisor of $f(x)$ and $g(x)$ is a divisor of $u(x)f(x)$. Thus, the factorization of a polynomial can be unique only up to a unit polynomial $u(x)$, and $u(x)f(x)$ has the same divisors as $f(x)$. 
-
-See that things are getting stranger.
 
 A _monic polynomial_ is a nonzero polynomial $f(x)$ of degree $m$ with high-order coefficient $f_{m}$ equal to $1$, i.e. $f(x) = f_{0} + f_{1}x + f_{2}x^{2} + \dots + x^{m}$. Every nonzero polynomial $g(x)$ may be written as the product $g(x) = g_{m}f(x)$ of a monic polynomial $f(x)$ of the same degree with a unit polynomial $u(x) = g_{m}$, and the product of two monic polynomials is monic. We may therefore consider only factorizations of monic polynomials into products of monic polynomials.
 
 Every nonzero polynomial $f(x)$ is divisible by $1$ and $f(x)$; these divisors are called trivial. A polynomial $g(x)$ is said to be a factor of a polynomial $f(x)$ if $g(x)$ is monic and a nontrivial divisor of $f(x)$. Thus the degree of any factor $g(x)$ of $f(x)$ satisfies $1 \leq deg(g(x)) \leq deg(f(x))$.
 
 A polynomial $g(x)$ of degree $1$ or more that has no factors is called an _irreducible polynomial_, and a monic irreducible polynomial is called a _prime polynomial_. Now we are going to show that every monic polynomial has a unique factorization into prime polynomials factors.
+
+### 7.5.2 Mod-g(x) arithmetic
+
+Given a monic polynomial $g(x)$ of degree $m$, every polynomial $f(x)$ may be expressed as $f(x) = q(x)g(x) + r(x)$ for some polynomial remainder $r(x)$ such that $deg(r(x)) < m$ and some polynomial quotient $q(x)$. This may be proved by the Euclidean long division algorithm, with component operations in $F$. The resulting quotient $q(x)$ and remainder $r(x)$ are unique. The remainder polynomial $r(x)$ is denoted by $f(x) \equiv r(x) \mod g(x)$. The set of all possible remainder polynomials is the set $R_{F, m} = \\{ r_{0} + r_{1}x + \dots + r_{m - 1}x^{m - 1} | r_{j} \in F, 0 \leq j \leq m - 1 \\}$ whose size is $|R_{F, m}| = |F|^{m}$. Evidently $g(x)$ is a divisor of $f(x)$ if and only if $f(x) \mod g(x) = 0$. Remainder arithmetic using the remainder set $R_{F, m}$ is called "mod-g(x) arithmetic". The rules for mod-g(x) arithmetic follow from the rules for polynomial arithmetic as follows.
+
+Let $r(x) = f(x) \mod g(x)$ and $s(x) = h(x) \mod g(x)$; then, as polynomials, $r(x) = f(x) - q(x)g(x)$ and $s(x) = h(x) - t(x)g(x)$ for some quotient polynomials $q(x)$ and $t(x)$. Then
+
+$f(x) + h(x) = r(x) + s(x) + (q(x) + t(x))g(x)$<br>
+$and$
+$f(x)h(x) = (r(x) + q(x)g(x))(s(x) + t(x)g(x)) = r(x)s(x) + (q(x)s(x) + t(x)r(x))g(x) + q(x)t(x)g^{2}(x)$
+
 
 
 
