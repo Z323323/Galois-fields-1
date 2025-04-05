@@ -255,7 +255,7 @@ $q(x)b_{1}(x)a_{2}(x) \dots a_{k}(x) + \beta r_{1}(x) \dots r_{n}(x)a_{2}(x) \do
 $->$<br>
 $\beta r_{1}(x) \dots r_{n}(x)a_{2}(x) \dots a_{k}(x) = b_{1}(x) \dots b_{j}(x) - q(x)b_{1}(x)a_{2}(x) \dots a_{k}(x)$<br>
 $->$<br>
-$r_{1}(x) \dots r_{n}(x)a_{2}(x) \dots a_{k}(x) = \beta^{- 1}b_{1}(x) \dots b_{j}(x) - q(x)b_{1}(x)a_{2}(x) \dots a_{k}(x)$<br>
+$r_{1}(x) \dots r_{n}(x)a_{2}(x) \dots a_{k}(x) = \beta^{- 1}(b_{1}(x) \dots b_{j}(x) - q(x)b_{1}(x)a_{2}(x) \dots a_{k}(x))$<br>
 $->$<br>
 $r_{1}(x) \dots r_{n}(x)a_{2}(x) \dots a_{k}(x) = \beta^{- 1}b_{1}(x)(b_{2}(x) \dots b_{j}(x) - q(x)a_{2}(x) \dots a_{k}(x))$<br>
 $->$<br>
