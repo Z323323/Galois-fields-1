@@ -261,7 +261,7 @@ $r_{1}(x) \dots r_{n}(x)a_{2}(x) \dots a_{k}(x) = \beta^{- 1}b_{1}(x)(b_{2}(x) \
 $->$<br>
 $f'(x) = r_{1}(x) \dots r_{n}(x)a_{2}(x) \dots a_{k}(x) = \beta^{- 1}b_{1}(x)(b_{2}(x) \dots b_{j}(x) - q(x)a_{2}(x) \dots a_{k}(x))$
 
-
+Now, $f'(x)$ is monic, because it is a product of monic polynomials; it has degree less than $f(x)$, since $deg(r(x)) < deg(a_{1}(x)$ and it has two different factorizations, with $b_{1}(x)$ a factor in one but not a divisor of any of the factors in the other, a contradiction.
 
 
 
