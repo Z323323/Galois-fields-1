@@ -263,7 +263,26 @@ $f'(x) = r_{1}(x) \dots r_{n}(x)a_{2}(x) \dots a_{k}(x) = \beta^{- 1}b_{1}(x)(b_
 
 Now, $f'(x)$ is monic, because it is a product of monic polynomials; it has degree less than $f(x)$, since $deg(r(x)) < deg(a_{1}(x))$ [ this is because at the right we have $b_{1}(x)q(x)$ which has the same degree of $a_{1}(x)$ and $deg(b_{2}(x) \dots b_{j}(x)) < deg(q(x)a_{2}(x) \dots a_{k}(x))$ ] and it has two different factorizations, with $b_{1}(x)$ a factor in one but not a divisor of any of the factors in the other, a contradiction.
 
+### 7.5.4 Enumerating prime polynomials
 
+The prime polynomials in $F[x]$ are analogous to the prime numbers in $Z$. One way to enumerate the prime polynomials is to use an analogue of the sieve of Eratosthenes. For integers, this method goes as follows: Start with a list of all integers greater than $1$. The first integer on the list is $2$, which is prime. Erase all multiples of $2$. The next remaining integer is $3$ which must be the next prime: Erase all multiples of $3$. The next remaining integer is $5$ which is prime: Repeat the process to get all primes.
+
+Similarly, to find the prime polynomials in $F_{2}[x]$ for example, first list all polynomials of degree $1$ or more in $F_{2}[x]$ in order of degree. (All nonzero polynomials in $F_{2}[x]$ are monic.) No degree-1 polynomial can have a factor, so the two degree-1 polynomials $x$ and $x + 1$ are both prime. Next, erase all degree-2 multiples of $x$ and $x + 1$, namely
+
+$x^{2} = x \otimes x$<br>
+$x^{2} \oplus x = x \otimes (x \oplus 1)$<br>
+$x^{2} \oplus 1 = (x \oplus 1) \otimes (x \oplus 1)$<br>
+
+from the list of degree-2 polynomials. This leaves one prime degree-2 polynomial, namely $x^{2} \oplus x \oplus 1$. Next, erase all degree-3 multiples of $x, x \oplus 1$ and $x^{2} \oplus x \oplus 1$ from the list eight degree-3 polynomials, namely the six polynomials
+
+$x^{3} = x \otimes x \otimes x$<br>
+$x^{3} + x^{2} = (x \oplus 1) \otimes x \otimes x$<br>
+$x^{3} + x = (x \oplus 1) \otimes (x \oplus 1) \otimes x$<br>
+$x^{3} + x^{2} + x = x \otimes (x^{2} \oplus x \oplus 1)$<br>
+$x^{3} + 1 = (x \oplus 1) \otimes (x^{2} + x + 1)$<br>
+$x^{3} + x^{2} + x + 1 = (x + 1) \otimes (x \oplus 1) \otimes (x \oplus 1)$
+
+The remaining polynomials are $x^{3} \oplus x^{2} \oplus 1$ and $x^{3} + x + 1$ must therefore be prime.
 
 
 
