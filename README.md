@@ -382,6 +382,44 @@ There are four remainder polynomails $\mod x^{2} + x + 1$, namely $\\{ 0, 1, x, 
   </tr>
 </table>
 
+<table>
+  <tr>
+    <th scope="col">×</th>
+    <th scope="col">0</th>
+    <th scope="col">1</th>
+    <th scope="col">x</th>
+    <th scope="col">x + 1</th>
+  </tr>
+  <tr>
+    <th scope="row">0</th>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th scope="row">1</th>
+    <td>0</td>
+    <td>1</td>
+    <td>x</td>
+    <td>x + 1</td>
+  </tr>
+  <tr>
+    <th scope="row">x</th>
+    <td>0</td>
+    <td>x</td>
+    <td>x + 1</td></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <th scope="row">x + 1</th>
+    <td>0</td>
+    <td>x + 1</td>
+    <td>1</td>
+    <td>x</td>
+  </tr>
+</table>
+
 A couple results for the second table are less intuitive and so let's see the actual process below.
 
 $\displaystyle \frac{X^{2}}{X^{2} + X + 1} = 1 - \frac{X - 1}{X^{2} + X + 1}$
