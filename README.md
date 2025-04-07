@@ -300,7 +300,7 @@ whose size is $|R_{F_{p}, m}| = p^{m}$.
 
 If you have a computer science background, it's quite simple to figure out that such structure allows to represent $2^{m}$ values, that is, $2^{m} - 1 + \\{ 0 \\} = 2^{m}$. What about other prime numbers then? Let's see an example using $5$ which will clarify the reasoning for any prime.
 
-**Ex. $p = 5$**
+**Ex. $p = 5, m = 2$**
 
 $R_{F_{5, 2}} = \\{ r_{0} + r_{1}x | r_{j} \in F_{5}, 0 \leq j \leq m - 1 \\}$<br>
 $->$<br>
