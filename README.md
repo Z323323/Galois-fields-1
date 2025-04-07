@@ -475,10 +475,11 @@ The complex multiplicative group $C^{\star}$ has precisely one cyclic subgroup o
 
 $\displaystyle \binom{n}{j} = \frac{n!}{j!(n - j)!} = \frac{n \cdot (n - 1) \cdot \dots \cdot (n - j + 1)}{j!}$
 
-The binomial function basically identifies the number of combinations of $n$ elements taken as groups of $j$ elements. Since the elements of any subgroup are unique we have
+Since the elements of any subgroup are unique we have (if I got it right, but I could be wrong here)
 
-$
+$\sigma_{1}(S) = \sum_{j = 1}^{n} \frac{n \cdot (n - 1)!}{(n - 1)!} \mod n = \sum_{j = 1}^{n} n  \mod n = n^{2} \mod n = 0$
 
+$\sigma_{n}(S) = \sum_{j = n}^{n} \frac{n \cdot (n - 1)!}{(n - 1)!}$
 
 $----$
 
