@@ -282,22 +282,59 @@ $x^{3} + x^{2} + x = x(x^{2} + x + 1)$<br>
 $x^{3} + 1 = (x + 1)(x^{2} + x + 1)$<br>
 $x^{3} + x^{2} + x + 1 = (x + 1)(x + 1)(x + 1)$
 
-The remaining polynomials are $x^{3} + x^{2} + 1$ and $x^{3} + x + 1$ must therefore be prime. Continuing this way, we may list all prime polynomials in F_{2}[x] up to any desired degree.
+The remaining polynomials are $x^{3} + x^{2} + 1$ and $x^{3} + x + 1$ must therefore be prime. Continuing this way, we may list all prime polynomials in $F_{2}[x]$ up to any desired degree.
 
 It turns out that the number $N(m)$ of prime polynomials of $F_{2}[x]$ of degree $m$ is $N(m) = 2, 1, 2, 3, 6, 9, 18, 30, 56, 99, \dots$ for $m = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, \dots$. A similar sieve algorithm may be used to find the prime polynomials in $F[x]$ over any finite field $F$. The algorithm with a listing of the monic polynomials ordered by degree, and successively erases the multiples of lower degree prime polynomials.
 
 ### 7.6 A construction of a field with $p^{m}$ elements
 
-We are finally here guys. We now show how to construct a field with $p^{m}$ elements for any prime integer $p$ and positive integer $m \geq 1$. Its elements will be the set $R_{F, m}$ of remainder polynomials of degrees less than $m$, and multiplication will be defined modulo an irreducible polynomial $g(x)$ of degree $m$. We will subsequently sow that every finite field is isomorphic to a finite field that is constructed in this way.
+We now show how to construct a field with $p^{m}$ elements for any prime integer $p$ and positive integer $m \geq 1$. Its elements will be the set $R_{F, m}$ of remainder polynomials of degrees less than $m$, and multiplication will be defined modulo an irreducible polynomial $g(x)$ of degree $m$. We will subsequently show that every finite field is isomorphic to a finite field that is constructed in this way.
 
 The construction assumes the existence of a prime polynomial $g(x) \in F_{p}[x]$ of degree $m$. The proof that such a polynomial exists for all prime $p$ and $m \geq 1$ will be deferred until later. The field that we construct will be denoted by $F_{g(x)}$. 
 
-The set of elements of $F_{g(x)$ will be taken to be the $\mod g(x)$ remainder set $R_{F_{p, m}} = \\{ r_{0} + r_{1}x + \dots + r_{m - 1}x^{m - 1} | r_{j} \in F_{p}, 0 \leq j \leq m - 1 \\}$
+The set of elements of $F_{g(x)}$ will be taken to be the $\mod g(x)$ remainder set 
 
+$R_{F_{p, m}} = \\{ r_{0} + r_{1}x + \dots + r_{m - 1}x^{m - 1} | r_{j} \in F_{p}, 0 \leq j \leq m - 1 \\}$
 
+whose size is $|R_{F_{p}, m}| = p^{m}$.
 
+If you have a computer science background, it's quite simple to figure out that such structure allows to represent $2^{m}$ values, that is, $2^{m} - 1 + \\{ 0 \\} = 2^{m}$. What about other prime numbers then? Let's see an example using $5$ which will clarify the reasoning for any prime.
 
+**Ex. $p = 5$**
 
+$R_{F_{5, 2}} = \\{ r_{0} + r_{1}x | r_{j} \in F_{5}, 0 \leq j \leq m - 1 \\}$<br>
+$->$<br>
+We set $x = 5$<br>
+$->$<br>
+$R_{F_{5, 2}} = \\{ 0 + 0(5) \\} = 0$<br>
+$R_{F_{5, 2}} = \\{ 1 + 0(5) \\} = 1$<br>
+$R_{F_{5, 2}} = \\{ 2 + 0(5) \\} = 2$<br>
+$R_{F_{5, 2}} = \\{ 3 + 0(5) \\} = 3$<br>
+$R_{F_{5, 2}} = \\{ 4 + 0(5) \\} = 4$<br>
+$R_{F_{5, 2}} = \\{ 0 + 1(5) \\} = 5$<br>
+$R_{F_{5, 2}} = \\{ 1 + 1(5) \\} = 6$<br>
+$R_{F_{5, 2}} = \\{ 2 + 1(5) \\} = 7$<br>
+$R_{F_{5, 2}} = \\{ 3 + 1(5) \\} = 8$<br>
+$R_{F_{5, 2}} = \\{ 4 + 1(5) \\} = 9$<br>
+$R_{F_{5, 2}} = \\{ 0 + 2(5) \\} = 10$<br>
+$R_{F_{5, 2}} = \\{ 1 + 2(5) \\} = 11$<br>
+$R_{F_{5, 2}} = \\{ 2 + 2(5) \\} = 12$<br>
+$R_{F_{5, 2}} = \\{ 3 + 2(5) \\} = 13$<br>
+$R_{F_{5, 2}} = \\{ 4 + 0(5) \\} = 14$<br>
+$R_{F_{5, 2}} = \\{ 0 + 3(5) \\} = 15$<br>
+$R_{F_{5, 2}} = \\{ 1 + 3(5) \\} = 16$<br>
+$R_{F_{5, 2}} = \\{ 2 + 3(5) \\} = 17$<br>
+$R_{F_{5, 2}} = \\{ 3 + 3(5) \\} = 18$<br>
+$R_{F_{5, 2}} = \\{ 4 + 3(5) \\} = 19$<br>
+$R_{F_{5, 2}} = \\{ 0 + 4(5) \\} = 20$<br>
+$R_{F_{5, 2}} = \\{ 1 + 4(5) \\} = 21$<br>
+$R_{F_{5, 2}} = \\{ 2 + 4(5) \\} = 22$<br>
+$R_{F_{5, 2}} = \\{ 3 + 4(5) \\} = 23$<br>
+$R_{F_{5, 2}} = \\{ 4 + 4(5) \\} = 24$<br>
+$->$<br>
+$|R_{F_{5}, 2}| = 5^{2} = 25$.
+
+$----$
 
 
 
