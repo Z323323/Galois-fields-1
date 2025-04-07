@@ -473,6 +473,11 @@ The complex multiplicative group $C^{\star}$ has precisely one cyclic subgroup o
 
 ### $\sigma_{j}(S)$
 
+$\displaystyle \binom{n}{j} = \frac{n!}{j!(n - j)!}$
+$->$
+$\frac{n!}{j!(n - j)!} = \frac{n \cdot (n - 1) \cdot \dots \cdot (n - j + 1)}{j!}$
+
+If you have a little combinatorics background you'd know that the binomial function basically identifies the number of combinations of $n$ elements taken as groups of $j$ elements. 
 
 
 a) If $S = \\{ 1, \beta, \dots, \beta^{n - 1} \\}$ is a cyclic subgroup of $F^{\star}$, then $\sigma_{j}(S) = 0$ for $1 \leq j \leq n - 1$ and $\sigma_{n}(S) = (- 1)^{n + 1}$. In particular
