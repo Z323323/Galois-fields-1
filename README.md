@@ -426,14 +426,42 @@ $XX = X^{2}$<br>
 $->$<br>
 $\displaystyle \frac{X^{2}}{X^{2} + X + 1} = 1 - \frac{X + 1}{X^{2} + X + 1}$
 
-It's quite intuitive now to figure out that the remainder is $X + 1$, the same goes for other less intuitive ops like
+It's easier now to figure out that the remainder is $X + 1$, the same goes for other less intuitive ops like
 
 $(X + 1)X = X^{2} + X$<br>
 $->$<br>
 $\displaystyle \frac{X^{2} + X}{X^{2} + X + 1} = 1 - \frac{1}{X^{2} + X + 1}$
 
-Polynomials remainder are not the most intuitive thing as you can see.
+Polynomial remainder is not the most intuitive thing as you can see.
 
+### 7.7 $F_{q}^{\star}$ is cyclic
+
+It's quite simple now to figure out that $F_{q}^{\star}$ of $q - 1$ elements is a finite abelian group under multiplication. Let's see some cyclicality related theorems and behaviours (it's also already simple to figure out that this group is cyclic too by the way, I'm following this for completeness purposes and because there could be some important results).
+
+Every element of $F_{q}^{\star}$ is a root of the polynomial $x^{q - 1} - 1 \in F_{q}[x]$. This is simple too, that is, it follows from the Fermat's little theorem
+
+$x^{q - 1} \equiv 1 \mod p$<br>
+$->$<br>
+$x^{q - 1} - 1 = 0$<br>
+$--extra--$<br>
+$-LagrangeInterpolation>$<br>
+$(x - 1)(x - 2)\dots (x - (q - 1)) = x^{q - 1} - 1$
+
+### 7.7.1 Roots of polynomials
+
+Let $F[x]$ be the set of polynomials over an arbitrary field $F$. If $f(x) \in F[x]$ has a degree-1 factor $x - \alpha$ for some $\alpha \in F$, then $\alpha$ is called a _root_ of $f(x)$.
+
+Since any $f(x)$ can be uniquely expressed as $f(x) = q(x)(x - \alpha) + \beta$ for some quotient $q(x)$ and some $\beta \in F$ (for some remainder $r(x) = \beta$ of degree less than 1), it follows that $f(\alpha) = \beta$. Therefore $\alpha$ is a root of $f(x)$ if and only if $f(\alpha) = 0$, that is, if $\alpha$ is a root of the polynomial equation $f(x) = 0$.
+
+By degree additivity, the degree of a polynomial $f(x)$ is equal to the sum of the degrees of its prime factors, which are unique by unique factorization. Therefore a polynomial of degree $m$ can have at most $m$ degree-1 factors. This yields what is sometimes called the fundamental theorem of algebra.
+
+**Theorem 7.10 (Fundamental theorem of algebra)** Over any field $F$, a monic polynomial $f(x) \in F(x)$ of degree $m$ can have no more than $m$ roots in $F$. If it does have $m$ roots $\\{ \beta_{1}, \dots, \beta_{m} \\}$ then the unique factorization of $f(x)$ is $f(x) = (x - \beta_{1}) \dots (x - \beta_{m})$.
+
+Since the polynomial $x^{n} - 1$ can have at most $n$ roots in $F$, we have an important corollary:
+
+**Theorem 7.11 (Cyclic multiplicative subgroups)** In any field $F$, the multiplicative group $F^{\star}$ of nonzero elements has at most one cyclic subgroup of any given order $n$. If such a subgroup exists, then its elements $\\{ 1, \beta, \dots, \beta^{n - 1} \\}$ satisfy
+
+$x^{n} - 1 = (x - 1)(x - \beta) \dots (x - \beta^{n - 1})$
 
 
 
