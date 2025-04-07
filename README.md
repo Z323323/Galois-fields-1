@@ -345,28 +345,40 @@ It's quite simple now to figure out that this structure works for any prime, and
 There are four remainder polynomails $\mod x^{2} + x + 1$, namely $\\{ 0, 1, x, x + 1 \\}$. To actually get why the following arcane structures hold, you should know a little bit about polynomials (finite) long division, but for what concerns $F_{2}[x]$ you should figure out the behaviour quite easily. The structures produced for addition and multiplication follow the tables below.
 
 <table>
-  <caption>
-    Alien football stars
-  </caption>
   <tr>
-    <th scope="col">Player</th>
-    <th scope="col">Gloobles</th>
-    <th scope="col">Za'taak</th>
+    <th scope="col">+</th>
+    <th scope="col">0</th>
+    <th scope="col">1</th>
+    <th scope="col">x</th>
+    <th scope="col">x + 1</th>
   </tr>
   <tr>
-    <th scope="row">TR-7</th>
-    <td>7</td>
-    <td>4,569</td>
+    <th scope="row">0</th>
+    <td>0</td>
+    <td>1</td>
+    <td>x</td>
+    <td>x + 1</td>
   </tr>
   <tr>
-    <th scope="row">Khiresh Odo</th>
-    <td>7</td>
-    <td>7,223</td>
+    <th scope="row">1</th>
+    <td>1</td>
+    <td>0</td>
+    <td>x + 1</td>
+    <td>x</td>
   </tr>
   <tr>
-    <th scope="row">Mia Oolong</th>
-    <td>9</td>
-    <td>6,219</td>
+    <th scope="row">x</th>
+    <td>x</td>
+    <td>x + 1</td>
+    <td>0</td></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <th scope="row">x + 1</th>
+    <td>x + 1</td>
+    <td>x</td>
+    <td>1</td>
+    <td>0</td>
   </tr>
 </table>
 
