@@ -344,21 +344,31 @@ It's quite simple now to figure out that this structure works for any prime, and
 
 There are four remainder polynomails $\mod x^{2} + x + 1$, namely $\\{ 0, 1, x, x + 1 \\}$. To actually get why the following arcane structures hold, you should know a little bit about polynomials (finite) long division, but for what concerns $F_{2}[x]$ you should figure out the behaviour quite easily. The structures produced for addition and multiplication follow the tables below.
 
-|   +   | 0     | 1     | x     | x + 1 |
-|=======|-------|-------|-------|-------|
-| 0     | 0     | 1     | x     | x + 1 |
-| 1     | 1     | 0     | x + 1 | x     |
-| x     | x     | x + 1 | 0     | 1     |
-| x + 1 | x + 1 | x     | 1     | 0     |
-|-------|-------|-------|-------|-------|
-
-| × | 0 | 1 | x | x + 1 |
-|=====| --- | --- | --- | --- |
-| 0 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 1 | x | x + 1 |
-| x | 0 | x | x + 1 | 1 |
-| x + 1 | 0 | x + 1 | 1 | x |
-| --- | --- | --- | --- | --- |
+<table>
+  <caption>
+    Alien football stars
+  </caption>
+  <tr>
+    <th scope="col">Player</th>
+    <th scope="col">Gloobles</th>
+    <th scope="col">Za'taak</th>
+  </tr>
+  <tr>
+    <th scope="row">TR-7</th>
+    <td>7</td>
+    <td>4,569</td>
+  </tr>
+  <tr>
+    <th scope="row">Khiresh Odo</th>
+    <td>7</td>
+    <td>7,223</td>
+  </tr>
+  <tr>
+    <th scope="row">Mia Oolong</th>
+    <td>9</td>
+    <td>6,219</td>
+  </tr>
+</table>
 
 A couple results for the second table are less intuitive and so let's see the actual process below.
 
