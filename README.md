@@ -269,20 +269,30 @@ The prime polynomials in $F[x]$ are analogous to the prime numbers in $Z$. One w
 
 Similarly, to find the prime polynomials in $F_{2}[x]$ for example, first list all polynomials of degree $1$ or more in $F_{2}[x]$ in order of degree. (All nonzero polynomials in $F_{2}[x]$ are monic.) No degree-1 polynomial can have a factor, so the two degree-1 polynomials $x$ and $x + 1$ are both prime. Next, erase all degree-2 multiples of $x$ and $x + 1$, namely
 
-$x^{2} = x \otimes x$<br>
-$x^{2} \oplus x = x \otimes (x \oplus 1)$<br>
-$x^{2} \oplus 1 = (x \oplus 1) \otimes (x \oplus 1)$<br>
+$x^{2} = xx$<br>
+$x^{2} + x = x(x + 1)$<br>
+$x^{2} + 1 = (x + 1)(x + 1)$<br>
 
-from the list of degree-2 polynomials. This leaves one prime degree-2 polynomial, namely $x^{2} \oplus x \oplus 1$. Next, erase all degree-3 multiples of $x, x \oplus 1$ and $x^{2} \oplus x \oplus 1$ from the list eight degree-3 polynomials, namely the six polynomials
+from the list of degree-2 polynomials. This leaves one prime degree-2 polynomial, namely $x^{2} + x + 1$. Next, erase all degree-3 multiples of $x, x + 1$ and $x^{2} + x + 1$ from the list eight degree-3 polynomials, namely the six polynomials
 
-$x^{3} = x \otimes x \otimes x$<br>
-$x^{3} + x^{2} = (x \oplus 1) \otimes x \otimes x$<br>
-$x^{3} + x = (x \oplus 1) \otimes (x \oplus 1) \otimes x$<br>
-$x^{3} + x^{2} + x = x \otimes (x^{2} \oplus x \oplus 1)$<br>
-$x^{3} + 1 = (x \oplus 1) \otimes (x^{2} + x + 1)$<br>
-$x^{3} + x^{2} + x + 1 = (x + 1) \otimes (x \oplus 1) \otimes (x \oplus 1)$
+$x^{3} = xxx$<br>
+$x^{3} + x^{2} = (x + 1)xx$<br>
+$x^{3} + x = (x + 1)(x + 1)x$<br>
+$x^{3} + x^{2} + x = x(x^{2} + x + 1)$<br>
+$x^{3} + 1 = (x + 1)(x^{2} + x + 1)$<br>
+$x^{3} + x^{2} + x + 1 = (x + 1)(x + 1)(x + 1)$
 
-The remaining polynomials are $x^{3} \oplus x^{2} \oplus 1$ and $x^{3} + x + 1$ must therefore be prime.
+The remaining polynomials are $x^{3} + x^{2} + 1$ and $x^{3} + x + 1$ must therefore be prime. Continuing this way, we may list all prime polynomials in F_{2}[x] up to any desired degree.
+
+It turns out that the number $N(m)$ of prime polynomials of $F_{2}[x]$ of degree $m$ is $N(m) = 2, 1, 2, 3, 6, 9, 18, 30, 56, 99, \dots$ for $m = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, \dots$. A similar sieve algorithm may be used to find the prime polynomials in $F[x]$ over any finite field $F$. The algorithm with a listing of the monic polynomials ordered by degree, and successively erases the multiples of lower degree prime polynomials.
+
+### 7.6 A construction of a field with $p^{m}$ elements
+
+We are finally here guys. We now show how to construct a field with $p^{m}$ elements for any prime integer $p$ and positive integer $m \geq 1$. Its elements will be the set $R_{F, m}$ of remainder polynomials of degrees less than $m$, and multiplication will be defined modulo an irreducible polynomial $g(x)$ of degree $m$. We will subsequently sow that every finite field is isomorphic to a finite field that is constructed in this way.
+
+The construction assumes the existence of a prime polynomial $g(x) \in F_{p}[x]$ of degree $m$. The proof that such a polynomial exists for all prime $p$ and $m \geq 1$ will be deferred until later. The field that we construct will be denoted by $F_{g(x)}$. 
+
+The set of elements of $F_{g(x)$ will be taken to be the $\mod g(x)$ remainder set $R_{F_{p, m}} = \\{ r_{0} + r_{1}x + \dots + r_{m - 1}x^{m - 1} | r_{j} \in F_{p}, 0 \leq j \leq m - 1 \\}$
 
 
 
