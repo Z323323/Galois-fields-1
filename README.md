@@ -422,15 +422,17 @@ There are four remainder polynomails $\mod x^{2} + x + 1$, namely $\\{ 0, 1, x, 
 
 A couple results for the second table are less intuitive and so let's see the actual process below.
 
+$XX = X^{2}$<br>
+$->$<br>
 $\displaystyle \frac{X^{2}}{X^{2} + X + 1} = 1 - \frac{X + 1}{X^{2} + X + 1}$
 
-It's quite intuitive now to figure out that the remainder is $X - 1$, the same goes for other less intuitive ops like
+It's quite intuitive now to figure out that the remainder is $X + 1$, the same goes for other less intuitive ops like
 
 $(X + 1)X = X^{2} + X$<br>
 $->$<br>
 $\displaystyle \frac{X^{2} + X}{X^{2} + X + 1} = 1 - \frac{1}{X^{2} + X + 1}$
 
-
+Polynomials remainder are not the most intuitive thing as you can see.
 
 
 
