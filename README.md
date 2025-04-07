@@ -463,7 +463,11 @@ Since the polynomial $x^{n} - 1$ can have at most $n$ roots in $F$, we have an i
 
 $x^{n} - 1 = (x - 1)(x - \beta) \dots (x - \beta^{n - 1})$
 
+Here I don't completely get why the factor $(x - 1)$ is included, but it holds nonetheless.
 
+The complex multiplicative group $C^{\star}$ has precisely one cyclic subgroup of each finite size $n$, consisting of $n$ complex $nth$ roots of unity. The real multiplicative group $R^{\star}$ has cyclic subgroups of size $1 (\\{ 1 \\})$ and $2 (\\{ \pm 1 \\})$, but none of any larger size (because for degrees $> 2$ we'll have complex solutions).
+
+**Exercise 11.** For $1 \leq j \leq n$, the $jth$ elementary symmetric function $\sigma_{j}(S)$
 
 
 
