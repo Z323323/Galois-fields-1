@@ -345,12 +345,14 @@ It's quite simple now to figure out that this structure works for any prime, and
 There are four remainder polynomails $\mod x^{2} + x + 1$, namely $\\{ 0, 1, x, x + 1 \\}$. To actually get why the following arcane structures hold, you should know a little bit about polynomials (finite) long division, but for what concerns $F_{2}[x]$ you should figure out the behaviour quite easily. The structures produced for addition and multiplication follow the tables below.
 
 | \oplus | 0 | 1 | x | x + 1 |
+| --- | --- | --- | --- | --- |
 | 0 | 0 | 1 | x | x + 1 |
 | 1 | 1 | 0 | x + 1 | x |
 | x | x | x + 1 | 0 | 1 |
 | x + 1 | x + 1 | x | 1 | 0 |
 
 | \otimes | 0 | 1 | x | x + 1 |
+| --- | --- | --- | --- | --- |
 | 0 | 0 | 0 | 0 | 0 |
 | 1 | 0 | 1 | x | x + 1 |
 | x | 0 | x | x + 1 | 1 |
