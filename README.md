@@ -463,11 +463,20 @@ Since the polynomial $x^{n} - 1$ can have at most $n$ roots in $F$, we have an i
 
 $x^{n} - 1 = (x - 1)(x - \beta) \dots (x - \beta^{n - 1})$
 
-Here I don't completely get why the factor $(x - 1)$ is included, but it holds nonetheless.
+$(x - 1)$ is included because $n$ is the order, indeed
+
+$(x - 1)(x - \beta) \dots (x - \beta^{n - 1}) = (x - \beta^{1}) \dots (x - \beta^{n})$
 
 The complex multiplicative group $C^{\star}$ has precisely one cyclic subgroup of each finite size $n$, consisting of $n$ complex $nth$ roots of unity. The real multiplicative group $R^{\star}$ has cyclic subgroups of size $1 (\\{ 1 \\})$ and $2 (\\{ \pm 1 \\})$, but none of any larger size (because for degrees $> 2$ we'll have complex solutions).
 
-**Exercise 11.** For $1 \leq j \leq n$, the $jth$ elementary symmetric function $\sigma_{j}(S)$
+**Exercise 11.** For $1 \leq j \leq n$, the $jth$ elementary symmetric function $\sigma_{j}(S)$ of a set $S$ of $n$ elements of a field $F$ is the sum of all $\binom{n}{j}$ of $j$ distinct elements of $S$. In particular $\sigma_{1}(S)$ is the sum of all elements of $S$, and $\sigma_{n}(S)$ is the product of all elements of $S$.
+
+a) If $S = \\{ 1, \beta, \dots, \beta^{n - 1} \\}$ is a cyclic subgroup of $F^{\star}$, then $\sigma_{j}(S) = 0$ for $1 \leq j \leq n - 1$ and $\sigma_{n}(S) = (- 1)^{n + 1}$. In particular
+
+- $\sum_{j = 0}^{n - 1} \beta^{j} = 0, if $n > 1$
+- $\prod_{j = 0}^{n - 1} \beta^{j} = (- 1)^{n - 1}$
+
+b) $(p - 1)! = 1 \cdot 2 \cdot 3 \dots \cdot (p - 1) = - 1 \mod p$. This is the Wilson's theorem, you can find it's detailed explanation/proof at [https://github.com/Z323323/Number-theory-interlude-1?tab=readme-ov-file#wilsons-theorem].
 
 
 
