@@ -332,11 +332,39 @@ $R_{F_{5, 2}} = \\{ 2 + 4(5) \\} = 22$<br>
 $R_{F_{5, 2}} = \\{ 3 + 4(5) \\} = 23$<br>
 $R_{F_{5, 2}} = \\{ 4 + 4(5) \\} = 24$<br>
 $->$<br>
-$|R_{F_{5}, 2}| = 5^{2} = 25$.
+$|R_{F_{5, 2}}| = 5^{2} = 25$.
 
 $----$
 
+It's quite simple now to figure out that this structure works for any prime, and any power. It's also quite simple to figure out that field axioms are satisfied by such structure. It's also important to note that our polynomial structure won't follow this structured order but will just allows to build a structure which is isomorphic to a structure which has the form shown by example above.
 
+**Theorem 7.9** If $g(x)$ is a prime polynomial of degree $m$ over a prime field $F_{p}$, then the set of remainder polynomials $R_{F_{p, m}}$ with $\mod g(x)$ arithmetic forms a finite field $F_{g(x)}$ with $p^{m}$ elements.
+
+**Example 1 (Provided by the document)** Let us construct a finite field with $2^{2} = 4$ elements using the prime degree-2 polynomial $g(x) = x^{2} + x + 1 \in F_{2}[x]$.
+
+There are four remainder polynomails $\mod x^{2} + x + 1$, namely $\\{ 0, 1, x, x + 1 \\}$. To actually get why the following arcane structures hold, you should know a little bit about polynomials (finite) long division, but for what concerns $F_{2}[x]$ you should figure out the behaviour quite easily. The structures produced for addition and multiplication follow the tables below.
+
+| \oplus | 0 | 1 | x | x + 1 |
+| 0 | 0 | 1 | x | x + 1 |
+| 1 | 1 | 0 | x + 1 | x |
+| x | x | x + 1 | 0 | 1 |
+| x + 1 | x + 1 | x | 1 | 0 |
+
+| \otimes | 0 | 1 | x | x + 1 |
+| 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | x | x + 1 |
+| x | 0 | x | x + 1 | 1 |
+| x + 1 | 0 | x + 1 | 1 | x |
+
+A couple results for the second table are less intuitive and so let's see the actual process below.
+
+$\displaystyle \frac{X^{2}}{X^{2} + X + 1} = 1 - \frac{X - 1}{X^{2} + X + 1}$
+
+It's quite intuitive now to figure out that the remainder is $X - 1$, the same goes for other less intuitive ops like
+
+$(X + 1)X = X^{2} + X$<br>
+$->$<br>
+$\displaystyle \frac{X^{2} + X}{X^{2} + X + 1} = 1 - \frac{1}{X^{2} + X + 1}$
 
 
 
