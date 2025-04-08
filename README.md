@@ -473,15 +473,15 @@ The complex multiplicative group $C^{\star}$ has precisely one cyclic subgroup o
 
 [ For the moment I don't have the time to delve Sigma algebra, hence I'm going forward. ]
 
-a) If $S = \\{ 1, \beta, \dots, \beta^{n - 1} \\}$ is a cyclic subgroup of $F^{\star}$, then $\sigma_{j}(S) = 0$ for $1 \leq j \leq n - 1$ and $\sigma_{n}(S) = (- 1)^{n + 1}$. In particular
+a) If $S = \\{ 1, \beta, \dots, \beta^{n - 1} \\}$ is a cyclic subgroup of $F^{\star}$, then $\sigma_{j}(S) = 0$ for $1 \leq j \leq n - 1$ and $\sigma_{n}(S) = (- 1)^{n + 1}$. [ Note that here $n$ refers to the number of elements of the multiplicative subgroup, there's some confusion about the actual meaning of $n$ here and so I'm not 100% sure of results reliability. ] In particular
 
-- $\sum_{j = 0}^{n - 1} \beta^{j} = 0$, if $n > 1$
-- - **Proof** Every element except $0$ has its relative negative part inside the set.
-- $\prod_{j = 0}^{n - 1} \beta^{j} = (- 1)^{n + 1} = 1$ [ $n$ is always odd (prime) ]
-- - **Proof** $\prod_{j = 0}^{n - 1} \beta^{j} = \prod_{j = 1}^{n - 1} \beta^{j} = \beta^{\sum_{j = 1}^{n - 1} j}$
+- **a.1)** $\sum_{j = 0}^{n - 1} \beta^{j} = 0$, if $n > 1$.
+- - **Proof** Every element except has its relative negative part inside the multiplicative set.
+- $\prod_{j = 0}^{n - 1} \beta^{j} = (- 1)^{n + 1} = - 1$. [ $n$ is always even if we refer to the number of elements of the multiplicative set. ]
+- - **Proof** $\prod_{j = 0}^{n - 1} \beta^{j} = \prod_{j = 1}^{n} \beta^{j} = \beta^{\sum_{j = 1}^{n} j}$
   - $->$
-  - $\beta^{\sum_{j = 1}^{n - 1} j} = \beta^{\sum_{j = 1}^{n - 1} j (\mod n - 1)} = \beta^{0}$
-  - since **a)**.
+  - $\beta^{\sum_{j = 1}^{n} j} = \beta^{\sum_{j = 1}^{n - 1} j \mod n} = \beta^{0}$
+  - since **a-1)**.
 
 b) $(p - 1)! = 1 \cdot 2 \cdot 3 \dots \cdot (p - 1) = - 1 \mod p$. This is the Wilson's theorem, you can find it's detailed explanation/proof at [https://github.com/Z323323/Number-theory-interlude-1?tab=readme-ov-file#wilsons-theorem]. For groups of the type $Z_{p}$ where $p$ is prime this is really easy.
 
