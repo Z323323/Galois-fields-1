@@ -298,7 +298,7 @@ $R_{F_{p, m}} = \\{ r_{0} + r_{1}x + \dots + r_{m - 1}x^{m - 1} | r_{j} \in F_{p
 
 whose size is $|R_{F_{p}, m}| = p^{m}$.
 
-If you have a computer science background, it's quite simple to figure out that such structure allows to represent $2^{m}$ values, that is, $2^{m} - 1 + \\{ 0 \\} = 2^{m}$. What about other prime numbers then? Let's see an example using $5$ which will clarify the reasoning for any prime.
+If you have a computer science background, it's quite simple to figure out that such structure allows to represent $2^{m}$ values, that is, $2^{m} - 1 + \\{ 0 \\} = 2^{m}$. What about other prime numbers then? Let's see a couple examples which will clarify everything better.
 
 **Ex. $p = 5, m = 2$**
 
@@ -336,7 +336,7 @@ $|R_{F_{5, 2}}| = 5^{2} = 25$.
 
 **Ex. $p = 3, m = 3$**
 
-$R_{F_{5, 2}} = \\{ r_{0} + r_{1}x + r_{2}x^{2} | r_{j} \in F_{3}, 0 \leq j \leq m - 1 \\}$<br>
+$R_{F_{3, 3}} = \\{ r_{0} + r_{1}x + r_{2}x^{2} | r_{j} \in F_{3}, 0 \leq j \leq m - 1 \\}$<br>
 $->$<br>
 We set $x = 3$<br>
 $->$<br>
