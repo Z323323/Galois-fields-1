@@ -334,6 +334,42 @@ $R_{F_{5, 2}} = \\{ 4 + 4(5) \\} = 24$<br>
 $->$<br>
 $|R_{F_{5, 2}}| = 5^{2} = 25$.
 
+**Ex. $p = 3, m = 3$**
+
+$R_{F_{5, 2}} = \\{ r_{0} + r_{1}x + r_{2}x^{2} | r_{j} \in F_{3}, 0 \leq j \leq m - 1 \\}$<br>
+$->$<br>
+We set $x = 3$<br>
+$->$<br>
+$R_{F_{3, 3}} = \\{ 0 + 0(3) + 0(3^{2}) \\} = 0$<br>
+$R_{F_{3, 3}} = \\{ 1 + 0(3) + 0(3^{2}) \\} = 1$<br>
+$R_{F_{3, 3}} = \\{ 2 + 0(3) + 0(3^{2}) \\} = 2$<br>
+$R_{F_{3, 3}} = \\{ 0 + 1(3) + 0(3^{2}) \\} = 3$<br>
+$R_{F_{3, 3}} = \\{ 1 + 1(3) + 0(3^{2}) \\} = 4$<br>
+$R_{F_{3, 3}} = \\{ 2 + 1(3) + 0(3^{2}) \\} = 5$<br>
+$R_{F_{3, 3}} = \\{ 0 + 2(3) + 0(3^{2}) \\} = 6$<br>
+$R_{F_{3, 3}} = \\{ 1 + 2(3) + 0(3^{2}) \\} = 7$<br>
+$R_{F_{3, 3}} = \\{ 2 + 2(3) + 0(3^{2}) \\} = 8$<br>
+$R_{F_{3, 3}} = \\{ 0 + 0(3) + 1(3^{2}) \\} = 9$<br>
+$R_{F_{3, 3}} = \\{ 1 + 0(3) + 1(3^{2}) \\} = 10$<br>
+$R_{F_{3, 3}} = \\{ 2 + 0(3) + 1(3^{2}) \\} = 11$<br>
+$R_{F_{3, 3}} = \\{ 0 + 1(3) + 1(3^{2}) \\} = 12$<br>
+$R_{F_{3, 3}} = \\{ 1 + 1(3) + 1(3^{2}) \\} = 13$<br>
+$R_{F_{3, 3}} = \\{ 2 + 1(3) + 1(3^{2}) \\} = 14$<br>
+$R_{F_{3, 3}} = \\{ 0 + 2(3) + 1(3^{2}) \\} = 15$<br>
+$R_{F_{3, 3}} = \\{ 1 + 2(3) + 1(3^{2}) \\} = 16$<br>
+$R_{F_{3, 3}} = \\{ 2 + 2(3) + 1(3^{2}) \\} = 17$<br>
+$R_{F_{3, 3}} = \\{ 0 + 0(3) + 2(3^{2}) \\} = 18$<br>
+$R_{F_{3, 3}} = \\{ 1 + 0(3) + 2(3^{2}) \\} = 19$<br>
+$R_{F_{3, 3}} = \\{ 2 + 0(3) + 2(3^{2}) \\} = 20$<br>
+$R_{F_{3, 3}} = \\{ 0 + 1(3) + 2(3^{2}) \\} = 21$<br>
+$R_{F_{3, 3}} = \\{ 1 + 1(3) + 2(3^{2}) \\} = 22$<br>
+$R_{F_{3, 3}} = \\{ 2 + 1(3) + 2(3^{2}) \\} = 23$<br>
+$R_{F_{3, 3}} = \\{ 0 + 2(3) + 2(3^{2}) \\} = 24$<br>
+$R_{F_{3, 3}} = \\{ 1 + 2(3) + 2(3^{2}) \\} = 25$<br>
+$R_{F_{3, 3}} = \\{ 2 + 2(3) + 2(3^{2}) \\} = 26$<br>
+$->$<br>
+$|R_{F_{3, 3}}| = 3^{3} = 27$.
+
 $----$
 
 It's quite simple now to figure out that this structure works for any prime, and any power. It's also quite simple to figure out that field axioms are satisfied by such structure. It's also important to note that our polynomial structure won't follow this structured order but will just allows to build a structure which is isomorphic to a structure which has the form shown by example above.
@@ -482,9 +518,9 @@ The complex multiplicative group $C^{\star}$ has precisely one cyclic subgroup o
 
 **b)** $(p - 1)! = 1 \cdot 2 \cdot 3 \dots \cdot (p - 1) = - 1 \mod p$. This is the Wilson's theorem, you can find it's detailed explanation/proof at [https://github.com/Z323323/Number-theory-interlude-1?tab=readme-ov-file#wilsons-theorem]. For groups of the type $Z_{p}$ where $p$ is prime this is really easy.
 
+### 7.7.2 Factoring $x^{q} - x$ over $F_{q}$
 
-
-
+For any $\beta \in F^{\star}_{q}$
 
 
 
