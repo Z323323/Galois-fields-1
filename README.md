@@ -471,16 +471,6 @@ The complex multiplicative group $C^{\star}$ has precisely one cyclic subgroup o
 
 **Exercise 11.** For $1 \leq j \leq n$, the $jth$ elementary symmetric function $\sigma_{j}(S)$ of a set $S$ of $n$ elements of a field $F$ is the sum of all $\binom{n}{j}$ products of $j$ distinct elements of $S$. In particular $\sigma_{1}(S)$ is the sum of all elements of $S$, and $\sigma_{n}(S)$ is the product of all elements of $S$.
 
-### $\sigma_{j}(S)$
-
-$\displaystyle \binom{n}{j} = \frac{n!}{j!(n - j)!} = \frac{n \cdot (n - 1) \cdot \dots \cdot (n - j + 1)}{j!}$
-
-$\displaystyle \sigma_{1}(S) = \frac{n!}{(n - 1)!} \mod n = n \mod n = 0$
-
-$\displaystyle \sigma_{n}(S) = \sum_{j = 0}^{n - 1} \frac{n!}{j!(n - j)!} \mod n = \sum_{j = 0}^{n - 1} \frac{n \cdot (n - 1) \cdot \dots \cdot (n - j + 1)}{j!} \mod n = \frac{n!}{n!} + \frac{n!}{(n - 1)!} + \frac{n!}{2!(n - 2)!} + \frac{n!}{3!(n - 3)!} + \dots + \frac{n!}{(n - 2)!2!} + \frac{n!}{(n - 1)} \mod n$
-
-$----$
-
 a) If $S = \\{ 1, \beta, \dots, \beta^{n - 1} \\}$ is a cyclic subgroup of $F^{\star}$, then $\sigma_{j}(S) = 0$ for $1 \leq j \leq n - 1$ and $\sigma_{n}(S) = (- 1)^{n + 1}$. In particular
 
 - $\sum_{j = 0}^{n - 1} \beta^{j} = 0$, if $n > 1$
