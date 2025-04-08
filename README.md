@@ -469,17 +469,15 @@ $(x - 1)(x - \beta) \dots (x - \beta^{n - 1}) = (x - \beta^{1}) \dots (x - \beta
 
 The complex multiplicative group $C^{\star}$ has precisely one cyclic subgroup of each finite size $n$, consisting of $n$ complex $nth$ roots of unity. The real multiplicative group $R^{\star}$ has cyclic subgroups of size $1 (\\{ 1 \\})$ and $2 (\\{ \pm 1 \\})$, but none of any larger size (because for degrees $> 2$ we'll have complex solutions).
 
-**Exercise 11.** For $1 \leq j \leq n$, the $jth$ elementary symmetric function $\sigma_{j}(S)$ of a set $S$ of $n$ elements of a field $F$ is the sum of all $\binom{n}{j}$ of $j$ distinct elements of $S$. In particular $\sigma_{1}(S)$ is the sum of all elements of $S$, and $\sigma_{n}(S)$ is the product of all elements of $S$.
+**Exercise 11.** For $1 \leq j \leq n$, the $jth$ elementary symmetric function $\sigma_{j}(S)$ of a set $S$ of $n$ elements of a field $F$ is the sum of all $\binom{n}{j}$ products of $j$ distinct elements of $S$. In particular $\sigma_{1}(S)$ is the sum of all elements of $S$, and $\sigma_{n}(S)$ is the product of all elements of $S$.
 
 ### $\sigma_{j}(S)$
 
 $\displaystyle \binom{n}{j} = \frac{n!}{j!(n - j)!} = \frac{n \cdot (n - 1) \cdot \dots \cdot (n - j + 1)}{j!}$
 
-Since the elements of any subgroup are unique we have (if I got it right, but I could be wrong here)
+$\displaystyle \sigma_{1}(S) = \frac{n!}{(n - 1)!} \mod n = n \mod n = 0$
 
-$\sigma_{1}(S) = \sum_{j = 1}^{n} \frac{n \cdot (n - 1)!}{(n - 1)!} \mod n = \sum_{j = 1}^{n} n  \mod n = n^{2} \mod n = 0$
-
-$\sigma_{n}(S) = \sum_{j = n}^{n} \frac{n \cdot (n - 1)!}{(n - 1)!}$
+$\displaystyle \sigma_{n}(S) = \sum_{j = 0}^{n - 1} \frac{n!}{j!(n - j)!} \mod n = \frac{n \cdot (n - 1) \cdot \dots \cdot (n - j + 1)}{j!} \mod n$
 
 $----$
 
