@@ -534,6 +534,58 @@ The elements of $F_{q}$ are the $q$ distinct roots of the polynomial $x^{q} - x 
 
 $x^{q} - x = \prod_{\beta \in F_{q}} (x - \beta)$
 
+### 7.7.3 Every finite field has a primitive element
+
+A _primitive element_ of a finite field $F_{q}$ is an element $\alpha$ whose multiplicative order $|S(\alpha)|$ equals $q - 1$. If $\alpha$ is a primitive element, the the cyclic group $\\{ 1, \alpha, \alpha^{2}, \dots, \alpha^{q - 2} \\}$ is a set of $q - 1$ distinct nonzero elements of $F_{q}$, which therefore must be all the nonzero elements. Thus, if we can show that $F_{q}$ has at least one primitive element, we will have shown that its nonzero elements $F_{q}^{\star}$ form a cyclic group under multiplication of size $q - 1$. By Lagrange's theorem, the multiplicative order $|S(\beta)|$ of each nonzero element $\beta \in F_{q}^{\star}$ divides $q - 1$. Therefore the size $d$ of each cyclic subgroup of $F_{q}^{\star}$ divides $q - 1$. As we have seen, the number of elements in a cyclic group or subgroup of size $d$ that have order $d$ is the Euler number $\phi(d)$. Since by the cyclic subgroups theorem $F_{q}^{\star}$ has at most one cyclic subgroup of each size $d$, the number of elements in $F_{q}^{\star}$ with order less than $q - 1$ is at most
+
+$\sum_{d: d|(q - 1), d \neq q - 1} \phi(d)$
+
+But since the Euler members satisfy the relationship $n = \sum_{d: d | n} \phi(d)$ which in this case is
+
+$q - 1 = \sum_{d: d | n} \phi(d)$
+
+we conclude that there must be at least $\phi(q - 1)$ elements of $F_{q}^{\star}$ with order $q - 1$. Indeed, since $F_{q}^{\star}$ has at most $\phi(q - 1)$ elements of order $q - 1$, all inequalities must be satisfied with equality, i.e. $F_{q}^{\star}$ has precisely $\phi(d)$ elements of order $d$ for each divisor $d$ of $q - 1$. $\phi(q - 1) \geq 1$ always for $q \geq 2$, so a primitive element $\alpha$ of order $q - 1$ exists. Thus, $F_{q}^{\star}$ is cyclic and has one cyclic subgroup of each order $d$ that divides $q - 1$. This proves the following theorem.
+
+**Theorem 7.13 (Primitive elements)** Given any field $F_{q}$ with $q$ elements, the nonzero elements of $F_{q}$ form a multiplicative cyclic group $F_{q}^{\star} = \\{ 1, \alpha, \alpha^{2}, \dots, \alpha^{q - 2} \\}$. Consequently $F_{q}^{\star}$ has $\phi(d) \geq 1$ elements of multiplicative order $d$ for every $d$ that divides $q - 1$, and no elements of any other order. In particular, $F_{q}^{\star}$ has $\phi(q - 1) \geq 1$ primitive elements.
+
+We will usually write the elements of a finite field $F_{q}$ as $\\{ 0, 1, \alpha, \alpha^{2}, \dots, \alpha^{q - 2} \\}$, where $\alpha$ denotes a primitive element. For $F_{g(x)}$, denoting a field element $\beta$ as a power of $\alpha$ rather than as a remainder polynomial helps to avoid confusion when we consider polynomials in $\beta$.
+
+**Example 2.** The prime field $F_{5}$ has $\phi(1) = 1$ element of order $1$ $(1)$, $\phi(2) = 1$ element of order $2$ $(4)$, and $\phi(4) = 2$ primitive elements of order $4$ $(2, 3)$. We can therefore write $F_{5} = \\{ 0, 1, 2, 2^{2}, 2^{3} \\}, since $2^{2} = 4$ and $2^{3} = 3 \mod 5$.
+
+**Example 3.** A field $F_{16} = \\{ 0, 1, \alpha, \dots, \alpha^{14} \\}$ with $16$ elements has
+
+- $\phi(1) = 1$ element of order 1 $(1)$
+- $\phi(3) = 2$ elements of order $3$ $(\alpha^{5}, \alpha^{10})$
+- $\phi(5) = 4$ elements of order $5$ $(\alpha^{3}, \alpha^{6}, \alpha^{9}, \alpha^{12})$
+- $\phi(15) = 8$ primitive elements of order $15$ $(\alpha, \alpha^{2}, \alpha^{4}, \alpha^{7}, \alpha^{8}, \alpha^{11}, \alpha^{13}, \alpha^{14})$
+
+The "logarithmic" representation of the nonzero elements of $F_{q}$ as distinct powers of a primitive element $\alpha$ is obviously highly convenient for multiplication and division. Multiplication in $F_{q}$ is often carried out by using such a "log table" to convert a polynomial $f(x) \in F_{q}$ to the exponent $i$ such that $f(x) = \alpha^{i}$, and then using an inverse "antilog table" to convert back after adding or subtracting exponents.
+
+### 7.8 Every finite field is isomorphic to a field $F_{g(x)}$
+
+We now wish to show that every finite field $F_{q}$ is isomorphic to a field $F_{g(x)}$ of the type that we have previously constructed. In particular, this will show that the number of elements of a finite field must be $q = p^{m}$.
+
+The development relies on the properties of minimal polynomials, which are the factors that apper in the unique factorization of $x^{q} - x$ over the prime subfield $F_{q}$.
+
+**7.8.1 Factoring $x^{q} - x$ into minimal polynomials over $F_{p}$**
+
+Consider any field $F_{q}$ with $q$ elements. We have seen already that $x^{q} - x \in F_{q}[x]$ factors completely into $q$ degree-1 factors $x - \beta \in F_{q}[x], \beta \in F_{q}$. We have also seen that if $F_{q}$ has characteristic $p$, then $F_{q}$ has a prime subfield $F_{p}$ with $p$ elements. The prime subfield $F_{p}$ contains the integers of $F_{q}$ which include $\\{ 0, \pm 1 \\}$. Therefore we may regard $x^{q} - x$ alternatively as a polynomial in $F_{p}[x]$. By unique factorization, $x^{q} - x$ factors over $F_{p}$ into a unique product of prime polynomials $g_{i}(x) \in F_{p}[x]$: 
+
+$x^{q} - x = \prod_{i} g_{i}(x)$
+
+Since each coefficient of $g_{i}(x)$ is an element of $F_{p} \subseteq F_{q}$, it is also an element of $F_{q}$, so, $g_{i}(x)$ is also a monic polynomial in $F_{q}[x]$. We therefore have the following two factorizations of $x^{q} - x$ in $F_{q}[x]$:
+
+$x^{q} - x = \prod_{\beta \in F_{q}} (x - \beta) = \prod_{i} g_{i}(x)$
+
+Since the first factorization is the unique prime factorization, it follows that each monic polynomial $g_{i}(x)$ of degree greater than $1$ must be reducible over $F_{q}$, and must factor into a product of degree-1 monic polynomials; i.e.
+
+$g_{i}(x) = \prod_{j = 1}^{deg(g_{i}(x))} (x - \beta_{ij})$
+
+The prime polynomials $g_{i}(x)$ are called the _minimal polynomials_ of $F_{q}$. Since each $\beta \in F_{q}$ appears exactly once on the left side of [ $x^{q} - x = \prod_{\beta \in F_{q}} (x - \beta) = \prod_{i} g_{i}(x)$ ], it also appears as a factor in exactly one minimal polynomial in [ $g_{i}(x) = \prod_{j = 1}^{deg(g_{i}(x))} (x - \beta_{ij})$ ]. Thus, the elements of $F_{q}$ are partitioned into disjoint sets $\\{ \beta_{1}, \dots, \beta_{ik} \\}$ where $k = deg(g_{i}(x))$, and each $\beta \in F_{q}$ is a root of exactly one minimal polynomial of $F_{q}$, called the minimal polynomial of $\beta$.
+
+
+
+
 
 
 
