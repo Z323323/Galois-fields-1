@@ -477,7 +477,7 @@ $\displaystyle \binom{n}{j} = \frac{n!}{j!(n - j)!} = \frac{n \cdot (n - 1) \cdo
 
 $\displaystyle \sigma_{1}(S) = \frac{n!}{(n - 1)!} \mod n = n \mod n = 0$
 
-$\displaystyle \sigma_{n}(S) = \sum_{j = 0}^{n - 1} \frac{n!}{j!(n - j)!} \mod n = \frac{n \cdot (n - 1) \cdot \dots \cdot (n - j + 1)}{j!} \mod n$
+$\displaystyle \sigma_{n}(S) = \sum_{j = 0}^{n - 1} \frac{n!}{j!(n - j)!} \mod n = \sum_{j = 0}^{n - 1} \frac{n \cdot (n - 1) \cdot \dots \cdot (n - j + 1)}{j!} \mod n = 1 + n + \frac{n \cdot (n - 1)}{2} + \frac{n \cdot (n - 1) \cdot (n - 2}{3!} + \dots + \frac{n \cdot (n - 1) \cdot \dots \cdot (n - 2)}{(n - 2)!} + n \mod n$
 
 $----$
 
