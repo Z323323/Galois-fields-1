@@ -581,7 +581,7 @@ $g_{i}(x) = \prod_{j = 1}^{deg(g_{i}(x))} (x - \beta_{ij})$
 
 The prime polynomials $g_{i}(x)$ are called the _minimal polynomials_ of $F_{q}$. Since each $\beta \in F_{q}$ appears exactly once on the left side of [ $x^{q} - x = \prod_{\beta \in F_{q}} (x - \beta) = \prod_{i} g_{i}(x)$ ], it also appears as a factor in exactly one minimal polynomial in [ $g_{i}(x) = \prod_{j = 1}^{deg(g_{i}(x))} (x - \beta_{ij})$ ]. Thus, the elements of $F_{q}$ are partitioned into disjoint sets $\\{ \beta_{1}, \dots, \beta_{ik} \\}$ where $k = deg(g_{i}(x))$, and each $\beta \in F_{q}$ is a root of exactly one minimal polynomial of $F_{q}$, called the minimal polynomial of $\beta$. The key property of the minimal polynomial of $\beta$ is the following.
 
-**Lemma 7.14** Let $g(x)$ be the minimal polynomial of any given $\beta in F_{q}$. Then $g(x)$ is the monic polynomial of least degree in $F_{p}[x]$ such that $g(\beta) = 0$. Moreover, for any $f(x) \in F_{p}[x]$, $f(\beta) = 0$ if and only if $g(x)$ divides $f(x)$.
+**Lemma 7.14** Let $g(x)$ be the minimal polynomial of any given $\beta \in F_{q}$. Then $g(x)$ is the monic polynomial of least degree in $F_{p}[x]$ such that $g(\beta) = 0$. [ This basically means that a minimal polynomial defined in $F_{p}[x]$ [ that is, a polynomial with coefficients $f_{i}$ and remainder $f_{0}$ such that $f_{0}, f_{1}, \dots \in Z_{p}$ ], will allow to map every element of $F_{q}$ where $q$ could be some $p^{m}$. To better understand this complex behaviour you can refer to section **7.6** where I provided a couple of useful examples of contructions with $p^{m}$ elements. ] Moreover, for any $f(x) \in F_{p}[x]$, $f(\beta) = 0$ if and only if $g(x)$ divides $f(x)$.
 
 **Proof** Let $h(x) \in F_{p}[x]$ be a monic polynomial of least degree such that $h(\beta) = 0$. Using the Euclidean division algorithm, $g(x) = q(x)h(x) + r(x)$ where $deg(r(x)) < deg(h(x))$. Since $h(\beta) = g(\beta) = 0$, we must have $r(\beta) = 0$. By the smallest degree property of $h(x)$, this implies that $r(x) = 0$, so $h(x)$ divides $g(x)$. But since $g(x)$ is irreducible, $h(x)$ cannot have degree less than $g(x)$, thus $deg(h(x)) = deg(g(x))$. Moreover, since both $h(x)$ and $g(x)$ are monic, this implies that $h(x) = g(x)$. Thus $g(x)$ is the monic polynomial of least degree in $F_{p}[x]$ such that $g(\beta) = 0$. Now let $f(x)$ be any polynomial in $F_{p}[x]$ that satisfies $f(\beta) = 0$. By Euclidean division, $f(x) = q(x)g(x) + r(x)$ with $deg(r(x)) < deg(g(x))$. Thus, $r(\beta) = f(\beta) = 0$. Since $deg(r(x)) < deg(g(x))$, $r(\beta) = 0$ iff $r(x) = 0$, i.e. iff $g(x) | f(x)$.
 
@@ -591,7 +591,7 @@ $x^{4} + x = x(x + 1)(x^{2} + x + 1)$
 
 so the minimal polynomials of $F_{4}$ are $x, x + 1$ and $x^{2} + x + 1$. The elements $0$ and $1 \in F_{4}$ are the roots of $x$ and $x + 1$ respectively. From $g_{i}(x) = \prod_{j = 1}^{deg(g_{i}(x))} (x - \beta_{ij})$ the other two elements of $F_{4}$, namely $\alpha$ and $\alpha^{2}$ must be roots of $x^{2} + x + 1 \in F_{2}[x]$. We verify that
 
-$x^{2} + x + 1 = (x + \alpha)(x + \alpha^{2})$
+$x^{2} + x + 1 = (x + \alpha)(x + \alpha^{2}) = x^{2} + \alpha^{2}x + \alpha x + \alpha\alpha^{2} = x^{2} + (\alpha^{2} + \alpha)x + \alpha\alpha^{2}$
 
 since $\alpha + \alpha^{2} = 1$ and $\alpha \star \alpha^{2} = \alpha^{3} = 1$.
 
