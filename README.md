@@ -595,9 +595,37 @@ $x^{2} + x + 1 = (x + \alpha)(x + \alpha^{2}) = x^{2} + \alpha^{2}x + \alpha x +
 
 since $\alpha + \alpha^{2} = 1$ and $\alpha \star \alpha^{2} = \alpha^{3} = 1$.
 
-[ Because $\alpha = x$ and $x^{2} \equiv x + 1 \mod x^{2} + x + 1$ and $x = 2$ then $x + (x + 1) = 2 + 3 \mod 4 = 1$ ].
+[ Because $\alpha = x$ and $x^{2} \equiv x + 1 \mod x^{2} + x + 1$ and $x = 2$ then $x + (x + 1) = 2x + 1 = 1 \in F_{2}[x]$ ].
 
-[ Also, $\alpha^{3} = x^{3} = xx^{2} \equiv x(x + 1) \equiv x^{2} + x \equiv 2x + 1 \equiv 1 \mod x^{2} + x + 1 \in F_{2}[x]$ ] 
+[ Also, $\alpha^{3} = x^{3} = xx^{2} \equiv x(x + 1) \equiv x^{2} + x \equiv 2x + 1 \equiv 1 \mod x^{2} + x + 1 \in F_{2}[x]$ ].
+
+Here things start getting harder, the actual difficult thing is to understand that we have to split the reasoning between the coefficients of polynomials in $F_{p}[x]$ and the actual polynomials in $R_{F_{p, m}}$.
+
+Indeed if you actually calculate $x(x + 1)(x^{2} + x + 1)$ you won't get $x^{4} + x$ but $x^{4} + 2x^{3} + 2x^{2} + x = x^{4} + x \in F_{2}[x]$.
+
+### 7.8.2 Valuation maps, minimal polynomials and subfields
+
+Given a field $F_{q}$ with prime subfield $F_{p}$, we now consider evaluating a nonzero polynomial $f(x) = \sum_{i} f_{i}x^{i} \in F_{p}[x]$ at an element $\beta \in F_{q}$ to give a value
+
+$f(\beta) = \sum_{i = 0}^{deg(f(x))} f_{i}\beta^{i}$
+
+in $F_{q}$, where $f_{i}$ is taken as an element of $F_{q}$ for the purposes of this evaluation. The value of the zero polynomial at any $\beta$ is $0$.
+
+The value $f(\beta)$ depends on both the polynomial $f(x)$ and field element $\beta \in F_{q}$. Rather than regarding $f(\beta)$ as a function of $\beta$, as the notation suggests, we will regard $f(\beta)$ as a function of the polynomial $f(x) \in F_{p}[x]$ for a fixed $\beta$. In other words we consider the $m_{\beta}: F_{p}[x] \rightarrow F_{q}$ that is defined by $m_{\beta}(f(x)) = f(\beta)$.
+
+[ This reconnects with the previous section, basically we need to evaluate the polynomial by performing $\mod g(x)$ arithmetic, then map the polynomial into $F_{p}[x]$ and then map the result into $F_{q}$. The last map is what creates the field, but the actual magic is performed earlier by $\mod g(x)$ arithmetic and map into $F_{p}[x]$. ]
+
+The set of values $m_{\beta}(F_{p}[x])$ of this map as $f(x)$ ranges over polynomials in $F_{p}[x]$ is by definition the subset of elements $G_{\beta} \subseteq F_{q}$ that can be expressed as linear combinations over $F_{p}$ of powers of $\beta$. We will show that $G_{\beta}$ forms a subfield of $F_{q}$ that is isomorphic to the polynomial remainder field $F_{g(x)}$ where $g(x)$ is the minimal polynomial of $\beta$, namely the monic polynomial of least degree such that $g(\beta) = 0$.
+
+We observe that the map $m_{\beta}: F_{p}[x] \rightarrow F_{q}$ preserves addition and multiplication, i.e. $m_{\beta}(f_{1}(x) + f_{2}(x)) = m_{\beta}(f_{1}(x)) + m_{\beta}(f_{2}(x))$ since both sides equal $f_{1}(\beta) + f_{2}(\beta)$, and $m_{\beta}(f_{1}(x)f_{2}(x)) = m_{\beta}(f_{1}(x))m_{\beta}(f_{2}(x))$ since both sides equal $f_{1}(\beta)f_{2}(\beta)$.
+
+Let's prove the isomorphism between $F_{g(x)}$ and $G_{\beta}$.
+
+**Theorem 7.15** For any $\beta \in F_{q}$, let $g(x)$ be the minimal polynomial of $\beta$. Then the set of all linear combinations $G_{\beta} = \\{ f(\beta) = \sum_{i} f_{i}\beta^{i}, f(x) \in F_{p}[x] \\}$ over $F_{p}$ of powers of $\beta$ is equal to the set $\\{ r(\beta), r(x), \in R_{F_{p}, m} \\}$ of values of reminder polynomials $r(x) \in R_{F_{p}, m}$, and $G_{\beta}$ is a field which is isomorphic to the field $F_{g(x)}$ under the correspondencs $r(\beta) \in G_{\beta} \leftrightarrow r(x) \in R_{F_{p}, m}$.
+
+**Proof**. We first verify that the correspondence $m_{\beta}: R_{F_{p}, m} \leftrightarrow G_{\beta}$ is one-to-one (invertible). First, if $f(\beta)$ is any element of $G_{\beta}$, then by the Euclidean division we can write $f(x) = q(x)g(x) + r(x)$ where $r(x) \in R_{F_{p}, m}$, and then $f(\beta) = q(\beta)g(\beta) + r(\beta) = r(\beta)$, so $f(\beta) = r(\beta)$ for some remainder polynomial $r(x)$. Thus $m_{\beta}(R_{F_{p}, m}) = m_{\beta}(F_{p}[x]) = G_{\beta}$. On the other hand, no two remainder polynomials $r(x), s(x)$ with degrees less than $m$ can evaluate to the same element of $G_{\beta}$ because if $r(\beta) = s(\beta)$, then $r(x) - s(x)$ is a nonzero polynomial of degree less than $g(x)$ that evaluates to $0$, contradiction. 
+ 
+
 
 
 
