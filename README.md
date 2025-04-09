@@ -595,6 +595,10 @@ $x^{2} + x + 1 = (x + \alpha)(x + \alpha^{2}) = x^{2} + \alpha^{2}x + \alpha x +
 
 since $\alpha + \alpha^{2} = 1$ and $\alpha \star \alpha^{2} = \alpha^{3} = 1$.
 
+[ Because $\alpha = x$ and $x^{2} \equiv x + 1 \mod x^{2} + x + 1$ and $x = 2$ then $x + (x + 1) = 2 + 3 \mod 4 = 1$ ].
+
+[ Also, $\alpha^{3} = x^{3} = xx^{2} \equiv x(x + 1) \equiv x^{2} + x \equiv 2x + 1 \equiv 1 \mod x^{2} + x + 1 \in F_{2}[x]$ ] 
+
 
 
 
