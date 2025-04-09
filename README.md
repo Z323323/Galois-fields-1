@@ -135,7 +135,7 @@ Before going over, let me spend a couple words about the primality constraint of
 2. If we have a $1$ in the set, $1$ will be a generator for $Z_{n}^{+}$, or, in other words, the presence of $1$ in the field set force the field set to be $\\{ 0, 1, 2, 3, \dots, n - 1 \\}$, because there are no constraints in the usage of the binary operations (here we only need consider $\oplus$).
 3. [2.] implies that if $n$ is not prime then $a, b \in Z_{n} | n = ab$ implies $ab \equiv 0 \mod n$, so the set of nonzero elements of $Z_{n}$ is not closed under multiplication mod $n$.
 
-Therefore the only way to have a field is to have a prime $n$. The reasoning changes with polynomials.
+Therefore the only way to have a field is to have a prime $n$. The reasoning changes with polynomials because [2.] won't exist anymore. This is because the presence of a generator is not an actual constraint implied by the definition of group (while the previous three points for "normal" finite fields hold nonetheless because are direct implications). Indeed we won't have a generator for the additive group in Galois fields. [3.] will be invalidated too; it won't be possible to produce the polynomial identified by the $\mod g(x)$ operation hence braking the primality contraint.
 
 ### 7.5 Polynomials
 
@@ -507,6 +507,8 @@ $(x - 1)$ is included because $n$ is the order, indeed
 
 $(x - 1)(x - \beta) \dots (x - \beta^{n - 1}) = (x - \beta^{1}) \dots (x - \beta^{n})$
 
+[ $\beta$ is basically the same as a generator in a multiplicative group, the actual difference is that we call it $\beta$ because it actually is a polynomial which remainders at different exponents map the whole field. Calling it $\beta$ provides an intuitive form which clearly reminds of generators in multiplicative groups. ]
+
 The complex multiplicative group $C^{\star}$ has precisely one cyclic subgroup of each finite size $n$, consisting of $n$ complex $nth$ roots of unity. The real multiplicative group $R^{\star}$ has cyclic subgroups of size $1 (\\{ 1 \\})$ and $2 (\\{ \pm 1 \\})$, but none of any larger size (because for degrees $> 2$ we'll have complex solutions).
 
 **Exercise 11.** For $1 \leq j \leq n$, the $jth$ elementary symmetric function $\sigma_{j}(S)$ of a set $S$ of $n$ elements of a field $F$ is the sum of all $\binom{n}{j}$ products of $j$ distinct elements of $S$. In particular $\sigma_{1}(S)$ is the sum of all elements of $S$, and $\sigma_{n}(S)$ is the product of all elements of $S$.
@@ -550,7 +552,7 @@ we conclude that there must be at least $\phi(q - 1)$ elements of $F_{q}^{\star}
 
 We will usually write the elements of a finite field $F_{q}$ as $\\{ 0, 1, \alpha, \alpha^{2}, \dots, \alpha^{q - 2} \\}$, where $\alpha$ denotes a primitive element. For $F_{g(x)}$, denoting a field element $\beta$ as a power of $\alpha$ rather than as a remainder polynomial helps to avoid confusion when we consider polynomials in $\beta$.
 
-**Example 2.** The prime field $F_{5}$ has $\phi(1) = 1$ element of order $1$ $(1)$, $\phi(2) = 1$ element of order $2$ $(4)$, and $\phi(4) = 2$ primitive elements of order $4$ $(2, 3)$. We can therefore write $F_{5} = \\{ 0, 1, 2, 2^{2}, 2^{3} \\}, since $2^{2} = 4$ and $2^{3} = 3 \mod 5$.
+**Example 2.** The prime field $F_{5}$ has $\phi(1) = 1$ element of order $1$ $(1)$, $\phi(2) = 1$ element of order $2$ $(4)$, and $\phi(4) = 2$ primitive elements of order $4$ $(2, 3)$. We can therefore write $F_{5} = \\{ 0, 1, 2, 2^{2}, 2^{3} \\}$, since $2^{2} = 4$ and $2^{3} = 3 \mod 5$.
 
 **Example 3.** A field $F_{16} = \\{ 0, 1, \alpha, \dots, \alpha^{14} \\}$ with $16$ elements has
 
