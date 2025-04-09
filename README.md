@@ -135,7 +135,7 @@ Before going over, let me spend a couple words about the primality constraint of
 2. If we have a $1$ in the set, $1$ will be a generator for $Z_{n}^{+}$, or, in other words, the presence of $1$ in the field set force the field set to be $\\{ 0, 1, 2, 3, \dots, n - 1 \\}$, because there are no constraints in the usage of the binary operations (here we only need consider $\oplus$).
 3. [2.] implies that if $n$ is not prime then $a, b \in Z_{n} | n = ab$ implies $ab \equiv 0 \mod n$, so the set of nonzero elements of $Z_{n}$ is not closed under multiplication mod $n$.
 
-Therefore the only way to have a field is to have a prime $n$. The reasoning changes with polynomials because [2.] won't exist anymore. This is because the presence of a generator is not an actual constraint implied by the definition of group (while the previous three points for "normal" finite fields hold nonetheless because are direct implications). Indeed we won't have a generator for the additive group in Galois fields. [3.] will be invalidated too; it won't be possible to produce the polynomial $g(x)$ identified by $\mod g(x)$ operation hence breaking the primality constraint (it will actually be a prime polynomial but will allow to map $p^{m}$ elements breaking primality because for $m geq 2$ $p^{m}$ won't be prime).
+Therefore the only way to have a field is to have a prime $n$. The reasoning changes with polynomials because [2.] won't exist anymore. The field existence will hold nonetheless because the presence of a generator is not an actual constraint implied by the definition of group (while the previous three points for "normal" finite fields hold nonetheless because are direct implications). Indeed we won't have a generator for the additive group in Galois fields. [3.] will be invalidated too; it won't be possible to produce the polynomial $g(x)$ identified by $\mod g(x)$ operation hence breaking the primality constraint (it will actually be a prime polynomial but will allow to map $p^{m}$ elements breaking primality because for $m \geq 2$, $p^{m}$ won't be prime).
 
 ### 7.5 Polynomials
 
@@ -579,8 +579,21 @@ Since the first factorization is the unique prime factorization, it follows that
 
 $g_{i}(x) = \prod_{j = 1}^{deg(g_{i}(x))} (x - \beta_{ij})$
 
-The prime polynomials $g_{i}(x)$ are called the _minimal polynomials_ of $F_{q}$. Since each $\beta \in F_{q}$ appears exactly once on the left side of [ $x^{q} - x = \prod_{\beta \in F_{q}} (x - \beta) = \prod_{i} g_{i}(x)$ ], it also appears as a factor in exactly one minimal polynomial in [ $g_{i}(x) = \prod_{j = 1}^{deg(g_{i}(x))} (x - \beta_{ij})$ ]. Thus, the elements of $F_{q}$ are partitioned into disjoint sets $\\{ \beta_{1}, \dots, \beta_{ik} \\}$ where $k = deg(g_{i}(x))$, and each $\beta \in F_{q}$ is a root of exactly one minimal polynomial of $F_{q}$, called the minimal polynomial of $\beta$.
+The prime polynomials $g_{i}(x)$ are called the _minimal polynomials_ of $F_{q}$. Since each $\beta \in F_{q}$ appears exactly once on the left side of [ $x^{q} - x = \prod_{\beta \in F_{q}} (x - \beta) = \prod_{i} g_{i}(x)$ ], it also appears as a factor in exactly one minimal polynomial in [ $g_{i}(x) = \prod_{j = 1}^{deg(g_{i}(x))} (x - \beta_{ij})$ ]. Thus, the elements of $F_{q}$ are partitioned into disjoint sets $\\{ \beta_{1}, \dots, \beta_{ik} \\}$ where $k = deg(g_{i}(x))$, and each $\beta \in F_{q}$ is a root of exactly one minimal polynomial of $F_{q}$, called the minimal polynomial of $\beta$. The key property of the minimal polynomial of $\beta$ is the following.
 
+**Lemma 7.14** Let $g(x)$ be the minimal polynomial of any given $\beta in F_{q}$. Then $g(x)$ is the monic polynomial of least degree in $F_{p}[x]$ such that $g(\beta) = 0$. Moreover, for any $f(x) \in F_{p}[x]$, $f(\beta) = 0$ if and only if $g(x)$ divides $f(x)$.
+
+**Proof** Let $h(x) \in F_{p}[x]$ be a monic polynomial of least degree such that $h(\beta) = 0$. Using the Euclidean division algorithm, $g(x) = q(x)h(x) + r(x)$ where $deg(r(x)) < deg(h(x))$. Since $h(\beta) = g(\beta) = 0$, we must have $r(\beta) = 0$. By the smallest degree property of $h(x)$, this implies that $r(x) = 0$, so $h(x)$ divides $g(x)$. But since $g(x)$ is irreducible, $h(x)$ cannot have degree less than $g(x)$, thus $deg(h(x)) = deg(g(x))$. Moreover, since both $h(x)$ and $g(x)$ are monic, this implies that $h(x) = g(x)$. Thus $g(x)$ is the monic polynomial of least degree in $F_{p}[x]$ such that $g(\beta) = 0$. Now let $f(x)$ be any polynomial in $F_{p}[x]$ that satisfies $f(\beta) = 0$. By Euclidean division, $f(x) = q(x)g(x) + r(x)$ with $deg(r(x)) < deg(g(x))$. Thus, $r(\beta) = f(\beta) = 0$. Since $deg(r(x)) < deg(g(x))$, $r(\beta) = 0$ iff $r(x) = 0$, i.e. iff $g(x) | f(x)$.
+
+**Example 1** Consider $F_{4}$ whose elements we now write as $\\{ 0, 1, \alpha, \alpha^{2} \\}$, where $\alpha$ may be taken as $x$ or $x + 1$. This field has characteristic $2$. The prime factorization of the binary polynomial $x^{4} - x = x^{4} + x \in F_{2}[x]$ is
+
+$x^{4} + x = x(x + 1)(x^{2} + x + 1)$
+
+so the minimal polynomials of $F_{4}$ are $x, x + 1$ and $x^{2} + x + 1$. The elements $0$ and $1 \in F_{4}$ are the roots of $x$ and $x + 1$ respectively. From $g_{i}(x) = \prod_{j = 1}^{deg(g_{i}(x))} (x - \beta_{ij})$ the other two elements of $F_{4}$, namely $\alpha$ and $\alpha^{2}$ must be roots of $x^{2} + x + 1 \in F_{2}[x]$. We verify that
+
+$x^{2} + x + 1 = (x + \alpha)(x + \alpha^{2})$
+
+since $\alpha + \alpha^{2} = 1$ and $\alpha \star \alpha^{2} = \alpha^{3} = 1$.
 
 
 
