@@ -232,11 +232,15 @@ In general we cannot divide evenly by a nonzero polynomial, since a polynomial $
 
 You shouldn't worry too much about this last sentence of the document, since it's really intuitive that multiplicating two polynomials [ with $deg(f(x)) > 0$ ] we can't get a $1$. This is solved introducing a $\mod g(x)$ operations which acts like a $\mod p$ operation but for polynomials, hence producing a cyclic multiplicative group of polynomial remainders and the presence of inverses [ we'll have order $p^{m} - 1$ thus something like $X^{p^{m} - 1} \equiv X \mod g(x)$. ].
 
+Also it's better to set clear definitions for symbols from now on, since reasonings will get harder and more complex the more we push forward.
+
+Writing $F_{n}[x]$ we indicate univariate (single indeterminate) polynomials of the form $f_{0} + f_{1}x + f_{2}x^{2} + \dots + f_{m}x^{m}$ such that $f_{i}, 0 \leq i \leq m$ where $f_{i} \in Z_{n}$. This means that for example, for $F_{2}[x]$ will contain every univariate polynomial of the form $f_{0} + f_{1}x + f_{2}x^{2} + \dots + f_{m}x^{m}$ such that $f_{i}, 0 \leq i \leq m$ where $f_{i} \in \\{ 0, 1 \\}$.
+
 ### 7.5.1 Definitions
 
 A polynomial is said to be a divisor of a polynomial $f(x)$ if $f(x)$ is a polynomial multiple of $g(x)$, that is, $f(x) = q(x)g(x)$ for some polynomial $q(x)$. Thus, all polynomials are trivially divisors of the zero polynomial. Polynomials which have polynomials inverses are the nonzero degree-0 polynomials $\beta \in F^{\star} = F - \\{ 0 \\}$. These are called units of $F[x]$. If $u(x)$ is a unit polynomial and $g(x)$ is a divisor of $f(x)$, then $u(x)g(x)$ is a divisor of $f(x)$ and $g(x)$ is a divisor of $u(x)f(x)$. Thus, the factorization of a polynomial can be unique only up to a unit polynomial $u(x)$, and $u(x)f(x)$ has the same divisors as $f(x)$. 
 
-A _monic polynomial_ is a nonzero polynomial $f(x)$ of degree $m$ with high-order coefficient $f_{m}$ equal to $1$, i.e. $f(x) = f_{0} + f_{1}x + f_{2}x^{2} + \dots + x^{m}$. Every nonzero polynomial $g(x)$ may be written as the product $g(x) = g_{m}f(x)$ of a monic polynomial $f(x)$ of the same degree with a unit polynomial $u(x) = g_{m}$, and the product of two monic polynomials is monic. We may therefore consider only factorizations of monic polynomials into products of monic polynomials.
+A _monic polynomial_ is a nonzero polynomial $f(x)$ of degree $m$ with high-order coefficient $f_{m}$ equal to $1$, i.e. $f(x) = f_{0} + f_{1}x + f_{2}x^{2} + \dots + x^{m}$. Every nonzero polynomial $g(x)$ may be written as the product $g(x) = g_{m}f(x)$ of a monic polynomial $f(x)$ of the same degree with a unit polynomial $u(x) = g_{m}$, and the product of two monic polynomials is monic. We may therefore consider only factorizations of monic polynomials into products of monic polynomials. [ Note that for $F_{2}[x]$ this is simplified too, since every polynomial $f(x) \in F_{2}[x]$ is monic. ]
 
 Every nonzero polynomial $f(x)$ is divisible by $1$ and $f(x)$; these divisors are called trivial. A polynomial $g(x)$ is said to be a factor of a polynomial $f(x)$ if $g(x)$ is monic and a nontrivial divisor of $f(x)$. Thus the degree of any factor $g(x)$ of $f(x)$ satisfies $1 \leq deg(g(x)) \leq deg(f(x))$.
 
