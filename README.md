@@ -264,7 +264,7 @@ $f(x)h(x) \equiv r(x)s(x) \mod g(x)$<br>
 $->$<br>
 $f(x) \otimes h(x) = r(x)s(x)$
 
-$R_{F_{n}, m}$ represents the set of polynomial remainders which under some constraints can map Galois fields. The map $R_{F_{n}, m} \rightarrow F_{n}[x]$ will transform the ring $F_{n}[x]$ into a field under some other constraints.
+$R_{F_{n}, m}$ represents the set of polynomial remainders which under some constraints can map Galois fields. The map $R_{F_{n}, m} \leftrightarrow F_{n}[x]$ will transform the ring $F_{n}[x]$ into a field under some other constraints. Note that this statement could have some formal problems; what I'm referring to is to perform any operation inside $R_{F_{n}, m}$ then map the result into $F_{n}[x]$ and get it back to $R_{F_{n}, m}$ to further transforms and so on.
 
 ### 7.5.3 Unique factorization
 
