@@ -230,6 +230,8 @@ The set $F[x]$ has many of the properties of a field. It's an abelian group unde
 
 In general we cannot divide evenly by a nonzero polynomial, since a polynomial $f(x)$ with $deg(f(x)) > 0$ has no multiplicative inverse, therefore $F[x]$ is a ring [ rings don't have inverses, while they are the same regarding other properties ], not a field. We now develop a series of properties of $F[x]$ that resemble those of $Z$.
 
+You shouldn't worry too much about this last sentence of the document, since it's really intuitive that multiplicating two polynomials [ with $deg(f(x)) > 0$ ] we can't get a $1$. This is solved introducing a $\mod g(x)$ operations which acts like a $\mod p$ operation but for polynomials, hence producing a cyclic multiplicative group of polynomial remainders and the presence of inverses [ we'll have order $p^{m} - 1$ thus something like $X^{p^{m} - 1} \equiv X \mod g(x)$. ].
+
 ### 7.5.1 Definitions
 
 A polynomial is said to be a divisor of a polynomial $f(x)$ if $f(x)$ is a polynomial multiple of $g(x)$, that is, $f(x) = q(x)g(x)$ for some polynomial $q(x)$. Thus, all polynomials are trivially divisors of the zero polynomial. Polynomials which have polynomials inverses are the nonzero degree-0 polynomials $\beta \in F^{\star} = F - \\{ 0 \\}$. These are called units of $F[x]$. If $u(x)$ is a unit polynomial and $g(x)$ is a divisor of $f(x)$, then $u(x)g(x)$ is a divisor of $f(x)$ and $g(x)$ is a divisor of $u(x)f(x)$. Thus, the factorization of a polynomial can be unique only up to a unit polynomial $u(x)$, and $u(x)f(x)$ has the same divisors as $f(x)$. 
