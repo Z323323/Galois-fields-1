@@ -230,7 +230,7 @@ The set $F[x]$ has many of the properties of a field. It's an abelian group unde
 
 In general we cannot divide evenly by a nonzero polynomial, since a polynomial $f(x)$ with $deg(f(x)) > 0$ has no multiplicative inverse, therefore $F[x]$ is a ring [ rings don't have inverses, while they are the same regarding other properties ], not a field. We now develop a series of properties of $F[x]$ that resemble those of $Z$.
 
-You shouldn't worry too much about this last sentence of the document, since it's really intuitive that multiplicating two polynomials [ with $deg(f(x)) > 0$ ] we can't get a $1$. This is solved introducing a $\mod g(x)$ operations which acts like a $\mod p$ operation but for polynomials, hence producing a cyclic multiplicative group of polynomial remainders and the presence of inverses [ we'll have order $p^{m} - 1$ thus something like $X^{p^{m} - 1} \equiv X \mod g(x)$. ].
+You shouldn't worry too much about this last sentence of the document, since it's really intuitive that multiplicating two polynomials [ with $deg(f(x)) > 0$ ] we can't get a $1$. This is solved introducing $\mod g(x)$ operations which acts like a $\mod p$ operation but for polynomials, hence producing a cyclic multiplicative group of polynomial remainders and the presence of inverses.
 
 Also it's better to set clear definitions for symbols from now on, since reasonings will get harder and more complex the more we push forward.
 
@@ -331,7 +331,7 @@ The construction assumes the existence of a prime polynomial $g(x) \in F_{p}[x]$
 
 The set of elements of $F_{g(x)}$ will be taken to be the $\mod g(x)$ remainder set 
 
-$R_{F_{p, m}} = \\{ r_{0} + r_{1}x + \dots + r_{m - 1}x^{m - 1} | r_{j} \in F_{p}, 0 \leq j \leq m - 1 \\}$
+$R_{F_{p}, m} = \\{ r_{0} + r_{1}x + \dots + r_{m - 1}x^{m - 1} | r_{j} \in F_{p}, 0 \leq j \leq m - 1 \\}$
 
 whose size is $|R_{F_{p}, m}| = p^{m}$.
 
@@ -339,11 +339,11 @@ If you have a computer science background, it's quite simple to figure out that 
 
 **Ex. $p = 5, m = 2$**
 
-$R_{F_{5, 2}} = \\{ r_{0} + r_{1}x | r_{j} \in F_{5}, 0 \leq j \leq m - 1 \\}$<br>
+$R_{F_{5}, 2} = \\{ r_{0} + r_{1}x | r_{j} \in F_{5}, 0 \leq j \leq m - 1 \\}$<br>
 $->$<br>
 We set $x = 5$<br>
 $->$<br>
-$R_{F_{5, 2}} = \\{$<br>
+$R_{F_{5}, 2} = \\{$<br>
 $0 + 0(5) = 0,$<br>
 $1 + 0(5) = 1,$<br>
 $2 + 0(5) = 2,$<br>
@@ -371,15 +371,15 @@ $3 + 4(5) = 23,$<br>
 $4 + 4(5) = 24$<br>
 $\\}$<br>
 $->$<br>
-$|R_{F_{5, 2}}| = 5^{2} = 25$.
+$|R_{F_{5}, 2}| = 5^{2} = 25$.
 
 **Ex. $p = 3, m = 3$**
 
-$R_{F_{3, 3}} = \\{ r_{0} + r_{1}x + r_{2}x^{2} | r_{j} \in F_{3}, 0 \leq j \leq m - 1 \\}$<br>
+$R_{F_{3}, 3} = \\{ r_{0} + r_{1}x + r_{2}x^{2} | r_{j} \in F_{3}, 0 \leq j \leq m - 1 \\}$<br>
 $->$<br>
 We set $x = 3$<br>
 $->$<br>
-$R_{F_{3, 3}} = \\{$<br>
+$R_{F_{3}, 3} = \\{$<br>
 $0 + 0(3) + 0(3^{2}) = 0,$<br>
 $1 + 0(3) + 0(3^{2}) = 1,$<br>
 $2 + 0(3) + 0(3^{2}) = 2,$<br>
@@ -409,17 +409,17 @@ $1 + 2(3) + 2(3^{2}) = 25,$<br>
 $2 + 2(3) + 2(3^{2}) = 26$<br>
 $\\}$<br>
 $->$<br>
-$|R_{F_{3, 3}}| = 3^{3} = 27$.
+$|R_{F_{3}, 3}| = 3^{3} = 27$.
 
 $----$
 
-It's quite simple now to figure out that this structure works for any prime, and any power. It's also quite simple to figure out that field axioms are satisfied by such structure. It's also important to note that our polynomial structure won't follow this structured order but will just allows to build a structure which is isomorphic to a structure which has the form shown by example above.
+It's quite simple now to figure out that this structure works for any prime, and any power. It's also quite simple to figure out that field axioms are satisfied by such structure. It's also important to note that our polynomial structure won't follow this structured order but will just allow to build a structure which is isomorphic to a structure which has the form shown by example above.
 
-**Theorem 7.9** If $g(x)$ is a prime polynomial of degree $m$ over a prime field $F_{p}$, then the set of remainder polynomials $R_{F_{p, m}}$ with $\mod g(x)$ arithmetic forms a finite field $F_{g(x)}$ with $p^{m}$ elements.
+**Theorem 7.9** If $g(x)$ is a prime polynomial of degree $m$ over a prime field $F_{p}$, then the set of remainder polynomials $R_{F_{p}, m}$ with $\mod g(x)$ arithmetic forms a finite field $F_{g(x)}$ with $p^{m}$ elements.
 
-**Example 1 (Provided by the document)** Let us construct a finite field with $2^{2} = 4$ elements using the prime degree-2 polynomial $g(x) = x^{2} + x + 1 \in F_{2}[x]$.
+**Example 1** Let us construct a finite field with $2^{2} = 4$ elements using the prime degree-2 polynomial $g(x) = x^{2} + x + 1 \in F_{2}[x]$.
 
-There are four remainder polynomails $\mod x^{2} + x + 1$, namely $\\{ 0, 1, x, x + 1 \\}$. To actually get why the following arcane structures hold, you should know a little bit about polynomials (finite) long division, but for what concerns $F_{2}[x]$ you should figure out the behaviour quite easily. The structures produced for addition and multiplication follow the tables below.
+There are four remainder polynomials $\mod x^{2} + x + 1$, namely $\\{ 0, 1, x, x + 1 \\}$. To actually get why the following arcane structures hold, you should know a little bit about polynomials (finite) long division, but for what concerns $F_{2}[x]$ you should figure out the behaviour quite easily. The structures produced for addition and multiplication follow the tables below.
 
 <table>
   <tr>
@@ -515,14 +515,16 @@ Polynomial remainder is not the most intuitive thing as you can see.
 
 It's quite simple now to figure out that $F_{q}^{\star}$ of $q - 1$ elements is a finite abelian group under multiplication. Let's see some cyclicality related theorems and behaviours (it's also already simple to figure out that this group is cyclic too by the way, I'm following this for completeness purposes and because there could be some important results).
 
-Every element of $F_{q}^{\star}$ is a root of the polynomial $x^{q - 1} - 1 \in F_{q}[x]$. This is simple too, that is, it follows from the Fermat's little theorem
+Every element of $F_{q}^{\star}$ is a root of the polynomial $x^{q - 1} - 1 \in F_{q}[x]$. From the Fermat's little theorem
 
 $x^{q - 1} \equiv 1 \mod p$<br>
 $->$<br>
-$x^{q - 1} - 1 = 0$<br>
+$x^{q - 1} - 1 = 0 \mod p$<br>
 $--extra--$<br>
 $-LagrangeInterpolation>$<br>
 $(x - 1)(x - 2)\dots (x - (q - 1)) = x^{q - 1} - 1$
+
+The subtle detail here is that $q$ actually refers to $p^{m}$ [ it won't be $p^{m}$ because the minimal polynomial will lower the resulting degrees, but we can consider it as $p^{m}$ since we will perform $p^{m} - 1$ multiplications of $x$ to get $1$ ] for which the Fermat's little theorem wouldn't work because $\phi(p^{m}) \neq p^{m} - 1$. It turns out that we can safely ignore this detail because the structure actually follows a polynomial version of the Fermat's theorem which works. That is, since $g(x)$ (modulo) is a prime polynomial and maps $p^{m}$ values, we can safely consider it as $q$ prime integer for which the Fermat's theorem holds while not being a prime integer (it's a prime polynomial nonetheless). To better explain this core concept, since prime polynomials (from the sieve of Eratosthenes) are formed such that they don't have any lower degree factor, if we keep multiplying what is called a _primitive element_ [ for example $x$ ] obtaining $x^{2}, x^{3}, \dots$ and taking the remainder polynomial performing $\mod g(x)$ operations where $g(x)$ is our prime polynomial, we will end up producing the whole $x, x^{2}, \dots, x^{p^{m} - 1}$ $(p^{m} - 1)$ unique elements of the field $F_{q} = F_{p^{m}}$ ($0$ is out of this reasoning because it is part of the additive group). Note that when we reach the degree of the primitive polynomial [ for ex. when we get $x^{2}$ and the primitive polynomial is $x^{2} + x + 1$ ] the remainder property will lower the resulting degree making the result to 'restart' the multiplication series from lower degrees. This behaviour will continue until we will get the previous showed polynomial, namely $x^{q - 1}$. Now another clarification is necessary. We already showed that if we define $R_{F_{p}, m} \leftrightarrow F_{p}[x]$ we can get a field with $p^{m}$ elements. This means that if we want for example a field with $2^{128}$ values we will need $R_{F_{2}, 128}$, thus a polynomial of degree $128$, for which the last element of the multiplication series will be $x^{128} - 1$ and $x^{128} \equiv 1 \mod g(x)$. Now the intuitive reasoning about what $g(x)$ could be is $x^{128} - 1$ because clearly $x^{128} \equiv 1 \mod x^{128} - 1$. Of course the reasoning is not so simple, because the actual magic of minimal polynomials is to be able to produce the whole field and we will need more concepts to construct them without brute force trials. For example following this reasoning the minimal polynomial for the previous $F_{4}$ field would be $x^{2} - 1$ because $x^{2} \equiv 1 \mod x^{2} + 1$, but then we would have get $\\{ 0, x, 1 \\}$ which is not $F_{4}$. See that the problem regarding minimal polynomials is way harder than it looks.
 
 ### 7.7.1 Roots of polynomials
 
