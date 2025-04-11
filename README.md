@@ -564,7 +564,7 @@ $X^{11} \equiv X^{5} + X \equiv X^{2} + X + 1$<br>
 $X^{12} \equiv X^{3} + X^{2} + X$<br>
 $X^{13} \equiv X^{4} + X^{3} + X^{2}$<br>
 $X^{14} \equiv X^{4} + X^{3} + X^{2} + 1$<br>
-$X^{15} = X^{4} + X^{3} + X^{2} + X + 1$<br>
+$X^{15} \equiv X^{4} + X^{3} + X^{2} + X + 1$<br>
 $X^{16} \equiv X^{4} + X^{3} + X + 1$<br>
 $X^{17} \equiv X^{4} + X + 1$<br>
 $X^{18} \equiv X + 1$<br>
@@ -584,7 +584,7 @@ $X^{31} \equiv 1$<br>
 $X^{32} \equiv X$<br>
 $\dots$
 
-
+which really looks like not following a structured form but working nonetheless, as I told you, prime polynomials are not jokes.
 
 
 
