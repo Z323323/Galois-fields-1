@@ -415,7 +415,7 @@ $----$
 
 It's quite simple now to figure out that this structure works for any prime, and any power. It's also quite simple to figure out that field axioms are satisfied by such structure. It's also important to note that our polynomial structure won't follow this structured order but will just allow to build a structure which is isomorphic to a structure which has the form shown by example above.
 
-**Theorem 7.9** If $g(x)$ is a prime polynomial of degree $m$ over a prime field $F_{p}$, then the set of remainder polynomials $R_{F_{p}, m}$ with $\mod g(x)$ arithmetic forms a finite field $F_{g(x)}$ with $p^{m}$ elements.
+**Theorem 7.9** If $g(x)$ is a prime polynomial of degree $m$ over a prime field $F_{p}$, then the set of remainder polynomials $R_{F_{p}, m}$ with $\mod g(x)$ arithmetic forms a finite field $F_{g(x)}$ with $p^{m}$ elements. [ No proof found here. ]
 
 **Example 1** Let us construct a finite field with $2^{2} = 4$ elements using the prime degree-2 polynomial $g(x) = x^{2} + x + 1 \in F_{2}[x]$.
 
@@ -510,6 +510,8 @@ $->$<br>
 $\displaystyle \frac{X^{2} + X}{X^{2} + X + 1} = 1 - \frac{1}{X^{2} + X + 1}$
 
 Polynomial remainder is not the most intuitive thing as you can see.
+
+[ Now the document makes some other clarifications about fields being defined on prime integers before proceeding to hot topics regarding fields defined on finite polynomials. ]
 
 ### 7.7 $F_{q}^{\star}$ is cyclic
 
