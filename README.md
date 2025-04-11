@@ -511,7 +511,7 @@ $\displaystyle \frac{X^{2} + X}{X^{2} + X + 1} = 1 - \frac{1}{X^{2} + X + 1}$
 
 Polynomial remainder is not the most intuitive thing as you can see.
 
-[ Now the document makes some other clarifications about fields being defined on prime integers before proceeding to hot topics regarding fields defined on finite polynomials. ]
+[ Now the document makes some clarifications about fields being defined on prime $q$ but the reasonings are a little vague considering the distinction between integers and polynomials. ]
 
 ### 7.7 $F_{q}^{\star}$ is cyclic
 
@@ -575,7 +575,7 @@ $x^{q} - x = \prod_{\beta \in F_{q}} (x - \beta)$
 
 ### 7.7.3 Every finite field has a primitive element
 
-A _primitive element_ of a finite field $F_{q}$ is an element $\alpha$ whose multiplicative order $|S(\alpha)|$ equals $q - 1$. If $\alpha$ is a primitive element, the the cyclic group $\\{ 1, \alpha, \alpha^{2}, \dots, \alpha^{q - 2} \\}$ is a set of $q - 1$ distinct nonzero elements of $F_{q}$, which therefore must be all the nonzero elements. Thus, if we can show that $F_{q}$ has at least one primitive element, we will have shown that its nonzero elements $F_{q}^{\star}$ form a cyclic group under multiplication of size $q - 1$ (!!). By Lagrange's theorem, the multiplicative order $|S(\beta)|$ of each nonzero element $\beta \in F_{q}^{\star}$ divides $q - 1$. Therefore the size $d$ of each cyclic subgroup of $F_{q}^{\star}$ divides $q - 1$ [ look at the examples below to get this easily ]. As we have seen, the number of elements in a cyclic group or subgroup of size $d$ that have order $d$ is the Euler number $\phi(d)$. Since by the cyclic subgroups theorem $F_{q}^{\star}$ has at most one cyclic subgroup of each size $d$, the number of elements in $F_{q}^{\star}$ with order less than $q - 1$ is at most
+A _primitive element_ of a finite field $F_{q}$ is an element $\alpha$ whose multiplicative order $|S(\alpha)|$ equals $q - 1$. If $\alpha$ is a primitive element, the cyclic group $\\{ 1, \alpha, \alpha^{2}, \dots, \alpha^{q - 2} \\}$ is a set of $q - 1$ distinct nonzero elements of $F_{q}$, which therefore must be all the nonzero elements. Thus, if we can show that $F_{q}$ has at least one primitive element, we will have shown that its nonzero elements $F_{q}^{\star}$ form a cyclic group under multiplication of size $q - 1$ (!!). By Lagrange's theorem, the multiplicative order $|S(\beta)|$ of each nonzero element $\beta \in F_{q}^{\star}$ divides $q - 1$. Therefore the size $d$ of each cyclic subgroup of $F_{q}^{\star}$ divides $q - 1$ [ look at the examples below to get this easily ]. As we have seen, the number of elements in a cyclic group or subgroup of size $d$ that have order $d$ is the Euler number $\phi(d)$. Since by the cyclic subgroups theorem $F_{q}^{\star}$ has at most one cyclic subgroup of each size $d$, the number of elements in $F_{q}^{\star}$ with order less than $q - 1$ is at most
 
 $\sum_{d: d|(q - 1), d \neq q - 1} \phi(d) = q - 1 - \phi(q - 1)$ [ because $n = q - 1 = max-order$. You can look at [https://github.com/Z323323/Number-theory-interlude-2?tab=readme-ov-file#sum_d--n-phid--n] for more. ]
 
