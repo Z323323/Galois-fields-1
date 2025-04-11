@@ -546,8 +546,6 @@ $(x - 1)$ is included because $n$ is the order, indeed
 
 $(x - 1)(x - \beta) \dots (x - \beta^{n - 1}) = (x - \beta^{1}) \dots (x - \beta^{n})$
 
-[ $\beta$ has basically the same meaning as a generator in a multiplicative group, the actual difference is that $\beta$ identifies a polynomial which remainders with $\mod g(x)$ at different exponents map the whole field. Calling it $\beta$ provides an intuitive form which clearly reminds of generators in multiplicative groups but remember that they are structurally different. ]
-
 The complex multiplicative group $C^{\star}$ has precisely one cyclic subgroup of each finite size $n$, consisting of $n$ complex $nth$ roots of unity. The real multiplicative group $R^{\star}$ has cyclic subgroups of size $1 (\\{ 1 \\})$ and $2 (\\{ \pm 1 \\})$, but none of any larger size (because for degrees $> 2$ we'll have complex solutions).
 
 **Exercise 11.** For $1 \leq j \leq n$, the $jth$ elementary symmetric function $\sigma_{j}(S)$ of a set $S$ of $n$ elements of a field $F$ is the sum of all $\binom{n}{j}$ products of $j$ distinct elements of $S$. In particular $\sigma_{1}(S)$ is the sum of all elements of $S$, and $\sigma_{n}(S)$ is the product of all elements of $S$.
